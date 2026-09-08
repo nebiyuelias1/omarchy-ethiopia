@@ -5,14 +5,14 @@ Official landing page and meetup hub for **Omarchy Ethiopia**, the Ethiopian cha
 ## Purpose
 1. **Introduce Omarchy Ethiopia**: Lightweight, zero-bloat showcase featuring upstream ASCII art and official messaging (*"Beautiful, fun & agentic Linux"*).
 2. **Partners Showcase**: Dedicated spotlight for official event partner **Tefer** and open community sponsorship.
-3. **Event Hub for Meetup 2026**: Embedded Lu.ma registration widget, agenda schedule, speaker lineup, and direct `.ics` calendar invite downloads.
+3. **Event Hub for Meetup 2026**: Embedded Luma registration widget and partner showcase.
 
 ## Design Highlights
 - **Zero-Bloat**: Pure semantic HTML, Tailwind utility styling, zero runtime animation overhead, and instant load time.
-- **Threaded Ethiopian Flag Border**: Embroidered stitch weave in Green (`#10b981`), Gold (`#fbbf24`), and Red (`#ef4444`) framing the hero top and bottom.
-- **Scroll Snap Navigation**: Smooth full-height viewport snapping (`snap-mandatory`) between Hero and Partners sections.
-- **Upstream Branding**: Official Omarchy ASCII block logo + ETHIOPIA, with the official rectangular blocks mark as the vector favicon (`/favicon.svg`).
-- **Lu.ma Integration**: Live interactive registration widget embedded on `/meetup` with 1-click calendar export.
+- **Ethiopian Flag Accent**: Clean 3-color line in Green (`#10b981`), Gold (`#fbbf24`), and Red (`#ef4444`) framing the page.
+- **Full Page Landing**: Single full-viewport presentation with official upstream copy, no scroll needed.
+- **Upstream Branding**: Official Omarchy vector logo + ETHIOPIA, with the official rectangular blocks mark as the vector favicon (`/favicon.svg`).
+- **Luma Integration**: Live interactive registration widget embedded on `/meetup` alongside official partners.
 
 ## Quick Start
 

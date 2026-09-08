@@ -1,28 +1,40 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { meetup2026 } from "@/data/event";
 import { OmarchyEthiopiaLogo } from "./OmarchyLogo";
 import { ThreadedFlagBorder } from "./ThreadedFlagBorder";
 
 export function Hero() {
   return (
-    <section className="h-screen min-h-screen w-full snap-start snap-always flex flex-col justify-between items-center text-center relative overflow-hidden bg-[#08090c]">
-      {/* Top Threaded Ethiopian Flag Border */}
+    <section className="h-screen w-full flex flex-col justify-between items-center text-center relative overflow-hidden bg-[#08090c]">
+      {/* Top Ethiopian Flag Line */}
       <ThreadedFlagBorder />
 
       {/* Hero Center Content */}
-      <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-4 py-auto my-auto">
-        {/* Official Upstream Omarchy Vector Logo (logo.svg) + Ethiopia */}
+      <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center px-4 my-auto">
+        {/* Official Upstream Omarchy Vector Logo + Ethiopia */}
         <OmarchyEthiopiaLogo className="w-full" />
 
-        {/* Official Headline from omarchy.org */}
-        <h1 className="mt-8 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
-          {meetup2026.tagline}
+        {/* Word-by-word Header from omarchy.org */}
+        <h1 className="mt-8 text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white">
+          <span>Beautiful, fun &amp; agentic Linux</span>{" "}
+          <span className="font-normal text-cream/65">by</span>{" "}
+          <Link
+            href="https://dhh.dk"
+            target="_blank"
+            rel="noreferrer"
+            className="underline decoration-transparent underline-offset-[6px] transition-colors duration-150 hover:decoration-tibeb-gold hover:text-tibeb-gold"
+          >
+            DHH
+          </Link>
         </h1>
 
-        {/* Official Description from omarchy.org */}
-        <p className="mt-3 max-w-2xl text-sm sm:text-base md:text-lg text-cream/70 leading-relaxed font-normal">
-          {meetup2026.summary}
+        {/* Word-by-word Description from omarchy.org */}
+        <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg text-cream/70 leading-relaxed font-normal">
+          <span className="block">The malleable OS for the age of agents.</span>
+          <span className="block mt-1 text-cream/60">
+            Vibe your way through every alteration, tweak, or trouble.
+          </span>
         </p>
 
         {/* Action Buttons */}
@@ -45,18 +57,9 @@ export function Hero() {
             <ArrowUpRight className="h-3.5 w-3.5 opacity-60" />
           </Link>
         </div>
-
-        {/* Scroll indicator that snaps to partners */}
-        <a
-          href="#partners"
-          className="mt-8 inline-flex items-center gap-1 font-mono text-[11px] text-cream/40 hover:text-tibeb-gold transition"
-        >
-          <span>Scroll to Partners</span>
-          <ChevronDown className="h-3.5 w-3.5 animate-bounce" />
-        </a>
       </div>
 
-      {/* Bottom Threaded Ethiopian Flag Border */}
+      {/* Bottom Ethiopian Flag Line */}
       <ThreadedFlagBorder />
     </section>
   );

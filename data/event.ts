@@ -2,12 +2,15 @@ export const registrationLink = "https://luma.com/zh5jv195";
 
 export const meetup2026 = {
   name: "Omarchy Ethiopia Meetup 2026",
-  tagline: "Beautiful, fun & agentic Linux.",
+  tagline: "Beautiful, fun & agentic Linux by DHH",
+  headline: "Beautiful, fun & agentic Linux",
+  author: "DHH",
+  authorUrl: "https://dhh.dk",
   subtagline: "The malleable OS for the age of agents.",
   summary:
-    "The malleable OS for the age of agents. Vibe your way through every alteration, tweak, and desire. Omarchy gives you a computing environment that responds to your intent.",
+    "The malleable OS for the age of agents. Vibe your way through every alteration, tweak, or trouble.",
   fullDescription:
-    "Share the love of beautiful, fun & agentic Linux. Get together with others who love computers as much as you do. Share plugins, present work, and help newcomers into the community.",
+    "The malleable OS for the age of agents. Vibe your way through every alteration, tweak, or trouble.",
   dateLabel: "Saturday, February 7, 2026",
   timeLabel: "10:00 AM – 4:30 PM EAT",
   venue: "Innovation Hub Auditorium, Bole Road, Addis Ababa",
