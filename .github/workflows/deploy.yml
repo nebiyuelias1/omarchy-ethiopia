@@ -55,8 +55,10 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npm run build
 
-      - name: Ensure .nojekyll
-        run: touch ./out/.nojekyll
+      - name: Ensure .nojekyll and CNAME
+        run: |
+          touch ./out/.nojekyll
+          if [ -f CNAME ]; then cp CNAME ./out/CNAME; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
