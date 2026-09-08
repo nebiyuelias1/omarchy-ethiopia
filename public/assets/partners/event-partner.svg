@@ -1,7 +1,15 @@
 <svg width="512" height="192" viewBox="0 0 512 192" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="192" rx="12" fill="#141418"/>
-  <rect x="20" y="20" width="472" height="152" rx="10" stroke="#E5A93C" stroke-opacity="0.65"/>
-  <path d="M64 96H448" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="8 8"/>
-  <text x="40" y="84" fill="#FDFBF7" font-family="JetBrains Mono, monospace" font-size="24">Omarchy Ethiopia</text>
-  <text x="40" y="122" fill="#E5A93C" font-family="JetBrains Mono, monospace" font-size="18">Event Partner Asset Slot</text>
+  <rect x="12" y="12" width="488" height="168" rx="10" stroke="#E5A93C" stroke-opacity="0.5"/>
+  <g stroke="#E5A93C" stroke-opacity="0.9" stroke-width="1.5" fill="none">
+    <path d="M48 76 L64 92 L48 108 L32 92 Z"/>
+    <path d="M48 85 L55 92 L48 99 L41 92 Z"/>
+    <path d="M64 92 H88"/>
+    <path d="M96 85 L103 92 L96 99 L89 92 Z"/>
+  </g>
+  <text x="128" y="88" fill="#FDFBF7" font-family="JetBrains Mono, monospace" font-size="24">Omarchy Ethiopia</text>
+  <text x="128" y="118" fill="#E5A93C" font-family="JetBrains Mono, monospace" font-size="16">Event Partner — 2026</text>
+  <g stroke="#2D6A4F" stroke-width="1.5" fill="none" stroke-dasharray="6 6">
+    <path d="M0 160 H512"/>
+  </g>
 </svg>

@@ -2,19 +2,44 @@ import { speakers } from "@/data/speakers";
 
 export function Speakers() {
   return (
-    <section className="rounded-2xl border border-cream/15 bg-black/25 p-6">
-      <h2 className="text-2xl font-semibold text-cream">Speakers & Panelists</h2>
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
+    <section id="speakers" className="w-full">
+      <div className="flex flex-col gap-1">
+        <p className="font-mono text-xs uppercase tracking-widest text-tibeb-gold">
+          {"// SPEAKERS & SESSIONS"}
+        </p>
+        <h2 className="text-2xl font-bold tracking-tight text-cream sm:text-3xl">
+          Keynote & Technical Sessions
+        </h2>
+      </div>
+
+      <div className="mt-8 grid gap-6 sm:grid-cols-3">
         {speakers.map((speaker) => (
-          <article key={speaker.name} className="rounded-xl border border-cream/10 bg-ink/65 p-5">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-highland-green/30 font-mono text-sm font-bold text-cream">
-              {speaker.avatar}
+          <article
+            key={speaker.name}
+            className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#121216] p-6 transition hover:border-tibeb-gold/40"
+          >
+            <div>
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] font-mono text-xs font-bold text-tibeb-gold">
+                  {speaker.avatar}
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cream text-sm">{speaker.name}</h3>
+                  <p className="text-xs text-cream/50">{speaker.role}</p>
+                  <p className="font-mono text-[11px] text-emerald-400">
+                    {speaker.organization}
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-4 font-mono text-xs font-semibold text-tibeb-gold">
+                &ldquo;{speaker.topic}&rdquo;
+              </p>
+
+              <p className="mt-2 text-xs leading-relaxed text-cream/70">
+                {speaker.bio}
+              </p>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-cream">{speaker.name}</h3>
-            <p className="text-sm text-cream/70">{speaker.role}</p>
-            <p className="text-sm text-tibeb-gold">{speaker.organization}</p>
-            <p className="mt-3 text-sm font-semibold text-cream">{speaker.topic}</p>
-            <p className="mt-2 text-sm leading-6 text-cream/80">{speaker.bio}</p>
           </article>
         ))}
       </div>

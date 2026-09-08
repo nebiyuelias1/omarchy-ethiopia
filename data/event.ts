@@ -1,71 +1,80 @@
 export const registrationLink = "https://luma.com/zh5jv195";
 
-export const installCommand = "curl -sSL https://omarchy.org.et/install.sh | bash";
-
 export const meetup2026 = {
   name: "Omarchy Ethiopia Meetup 2026",
-  chapterTag: "// ኦማርኪ ኢትዮጵያ • Addis Ababa Chapter",
-  tagline: "The Keyboard-First Distro. Tailored for Ethiopian Builders.",
+  tagline: "Beautiful, fun & agentic Linux.",
+  subtagline: "The malleable OS for the age of agents.",
   summary:
-    "A focused gathering for Ethiopian builders who value fast systems, lightweight workflows, and community-first open source.",
+    "The malleable OS for the age of agents. Vibe your way through every alteration, tweak, and desire. Omarchy gives you a computing environment that responds to your intent.",
+  fullDescription:
+    "Share the love of beautiful, fun & agentic Linux. Get together with others who love computers as much as you do. Share plugins, present work, and help newcomers into the community.",
   dateLabel: "Saturday, February 7, 2026",
   timeLabel: "10:00 AM – 4:30 PM EAT",
-  venue: "Bole, Addis Ababa",
+  venue: "Innovation Hub Auditorium, Bole Road, Addis Ababa",
+  venueShort: "Bole, Addis Ababa",
   venueDetails:
     "Innovation Hub Auditorium, Bole Road, Addis Ababa. Bring your laptop, charger, and power extension if possible.",
   mapLink:
     "https://maps.google.com/?q=Bole+Road+Addis+Ababa+Innovation+Hub+Auditorium",
   upstreamDocs: "https://omarchy.org",
-  telegram: "https://t.me/omarchyethiopia",
+  github: "https://github.com/omacom/omarchy",
   sponsorDeck:
     "https://drive.google.com/drive/folders/1vm1uudIWfNaSeh0jQbjXD20gEOZSRsCK?usp=sharing",
-  attendeeGuide: [
-    "Laptop with at least 8GB RAM and available USB port",
-    "Download preferred ISO images ahead of time",
-    "Power strip / extension cord for shared tables",
-    "Optional: external keyboard for live tiling workflow demos",
-  ],
   highlights: [
-    "Omarchy architecture deep dive",
-    "Live Hyprland rice/config demo",
-    "Coffee break + open-source networking",
+    "Omarchy architecture & agentic workflows",
+    "Live ricing & desktop malleability",
+    "Buna ceremony + local builder roundtable",
   ],
 } as const;
 
 export const schedule = [
   {
     time: "10:00",
-    title: "Opening Keynote",
-    details: "Why keyboard-first Linux matters for Ethiopian builders.",
+    title: "Opening Keynote: Beautiful, Fun & Agentic Linux",
+    speaker: "Bereket Alemu",
+    details:
+      "The vision behind Omarchy and why the malleable OS for the age of agents unlocks radical leverage for developers.",
   },
   {
     time: "10:45",
-    title: "Omarchy Architecture",
-    details: "Core stack, system design, and upstream contribution flow.",
+    title: "Omarchy Architecture: Distro Deep Dive",
+    speaker: "Nardos Tadesse",
+    details:
+      "System internals, packaging pipeline, memory footprint benchmarks, and how the Ethiopian chapter interfaces with upstream omarchy.org.",
   },
   {
     time: "11:45",
-    title: "Live Rice & Config Demo",
-    details: "Real-time Hyprland setup and productivity shortcuts.",
+    title: "Live Rice & Dotfiles Mastery Session",
+    speaker: "Local Rice Masters",
+    details:
+      "Real-time Hyprland window tiling, modal Wayland keybinds, Waybar configurations, and zero-latency terminal workspaces.",
   },
   {
     time: "12:45",
-    title: "Buna Break & Networking",
-    details: "Coffee ceremony-inspired break and community introductions.",
+    title: "Buna Ceremony & Community Networking",
+    speaker: "Traditional Buna Roundtable",
+    details:
+      "Freshly roasted Ethiopian coffee ceremony, community introductions, project sharing, and spontaneous hacker discussions.",
   },
   {
     time: "13:45",
-    title: "Lightning Talks",
-    details: "5-minute community demos, tools, and workflows.",
+    title: "Lightning Talks (5-Minute Demos)",
+    speaker: "Open Community Submissions",
+    details:
+      "Rapid-fire community demos: terminal utilities, local offline mirrors, and developer toolchains.",
   },
   {
     time: "15:00",
-    title: "Open Mic + Sponsor Spotlight",
-    details: "Q&A, sponsor callout, and next-step collaboration.",
+    title: "Partner Showcase: Tefer & Open Mic",
+    speaker: "Tefer Team & Community",
+    details:
+      "Spotlight on event partner Tefer, open floor Q&A, community roadmap, and collaborative hackathons across Addis Ababa.",
   },
   {
     time: "16:00",
-    title: "Install Jam",
-    details: "Hands-on setup support and local chapter roadmap.",
+    title: "Hands-On Install Jam & Debug Clinic",
+    speaker: "Omarchy Ethiopia Stewards",
+    details:
+      "Live installation assistance, dual-boot setups, hardware driver optimization, and getting your first PR ready for upstream.",
   },
 ] as const;

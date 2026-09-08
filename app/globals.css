@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Inter", "Geist", "Plus Jakarta Sans", "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", monospace;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
 
-  --color-ink: #0d0d11;
-  --color-basalt: #1c1b22;
-  --color-buna: #281e19;
-  --color-buna-mid: #8d5b4c;
-  --color-tibeb-gold: #e5a93c;
-  --color-highland-green: #2d6a4f;
-  --color-warm-red: #b93838;
-  --color-cream: #fdfbf7;
-  --color-parchment: #e6e1d8;
+  --color-ink: #08090c;
+  --color-basalt: #08090c;
+  --color-surface: #0f1016;
+  --color-surface-hover: #15161f;
+  --color-tibeb-gold: #fbbf24;
+  --color-tibeb-gold-bright: #fde047;
+  --color-ethiopia-green: #10b981;
+  --color-ethiopia-yellow: #fbbf24;
+  --color-ethiopia-red: #ef4444;
+  --color-cream: #fcfcfd;
+  --color-cream-muted: #a1a1aa;
 }
 
 :root {
@@ -20,10 +22,17 @@
 }
 
 body {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(229, 169, 60, 0.09), transparent 32%),
-    radial-gradient(circle at 95% 5%, rgba(185, 56, 56, 0.08), transparent 28%),
-    var(--color-basalt);
-  color: var(--color-cream);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background-color: #08090c;
+  color: #fcfcfd;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.25);
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }

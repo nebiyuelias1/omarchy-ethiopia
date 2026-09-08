@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Omarchy Ethiopia (`omarchy.org.et`)
 
-## Getting Started
+Official landing page and meetup hub for **Omarchy Ethiopia**, the Ethiopian chapter of the [Omarchy Linux distribution](https://omarchy.org).
 
-First, run the development server:
+## Purpose
+1. **Introduce Omarchy Ethiopia**: Lightweight, zero-bloat showcase featuring upstream ASCII art and official messaging (*"Beautiful, fun & agentic Linux"*).
+2. **Partners Showcase**: Dedicated spotlight for official event partner **Tefer** and open community sponsorship.
+3. **Event Hub for Meetup 2026**: Embedded Lu.ma registration widget, agenda schedule, speaker lineup, and direct `.ics` calendar invite downloads.
+
+## Design Highlights
+- **Zero-Bloat**: Pure semantic HTML, Tailwind utility styling, zero runtime animation overhead, and instant load time.
+- **Threaded Ethiopian Flag Border**: Embroidered stitch weave in Green (`#10b981`), Gold (`#fbbf24`), and Red (`#ef4444`) framing the hero top and bottom.
+- **Scroll Snap Navigation**: Smooth full-height viewport snapping (`snap-mandatory`) between Hero and Partners sections.
+- **Upstream Branding**: Official Omarchy ASCII block logo + ETHIOPIA, with the official rectangular blocks mark as the vector favicon (`/favicon.svg`).
+- **Lu.ma Integration**: Live interactive registration widget embedded on `/meetup` with 1-click calendar export.
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Run lint checks
+npm run lint
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
