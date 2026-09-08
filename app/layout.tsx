@@ -31,11 +31,7 @@ export const metadata: Metadata = {
     "Meetup 2026",
     "Open Source Ethiopia",
   ],
-  icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
-  },
+
   openGraph: {
     title: "Omarchy Ethiopia — Beautiful, fun & agentic Linux",
     description:
