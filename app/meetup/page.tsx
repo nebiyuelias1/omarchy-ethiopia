@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  CalendarDays,
   ArrowUpRight,
-  MapPin,
   Sparkles,
   ArrowLeft,
 } from "lucide-react";
@@ -15,7 +13,7 @@ import { meetup2026, registrationLink } from "@/data/event";
 export const metadata: Metadata = {
   title: "Meetup 2026",
   description:
-    "Omarchy Ethiopia Meetup 2026 in Addis Ababa. Embedded Luma registration and partner showcase.",
+    "Omarchy Ethiopia Meetup 2026. Embedded Luma registration and partner showcase.",
 };
 
 export default function MeetupPage() {
@@ -33,7 +31,7 @@ export default function MeetupPage() {
           </Link>
 
           <span className="font-mono text-xs text-cream/40">
-            ADDIS ABABA · 2026
+            2026
           </span>
         </div>
 
@@ -55,37 +53,16 @@ export default function MeetupPage() {
               {meetup2026.fullDescription}
             </p>
 
-            {/* Event Time & Venue Details */}
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 font-mono text-xs text-cream/75 border-y border-white/[0.08] py-4">
-              <span className="flex items-center gap-2 text-tibeb-gold">
-                <CalendarDays className="h-4 w-4" />
-                {meetup2026.dateLabel} · {meetup2026.timeLabel}
-              </span>
-              <span className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-rose-400" />
-                {meetup2026.venue}
-              </span>
-            </div>
-
             {/* Action Bar */}
-            <div className="mt-6 flex flex-wrap items-center gap-3 font-mono text-xs">
+            <div className="mt-8 flex flex-wrap items-center gap-3 font-mono text-xs">
               <Link
                 href={registrationLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-lg bg-tibeb-gold px-5 py-3 font-bold text-black transition hover:bg-tibeb-gold-bright shadow-lg"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-tibeb-gold px-6 py-3 font-bold text-black transition hover:bg-tibeb-gold-bright shadow-lg"
               >
                 <span>Open in Luma</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
-              </Link>
-              <Link
-                href={meetup2026.mapLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 px-4 py-3 text-cream/60 transition hover:border-white/30 hover:text-cream"
-              >
-                <span>Google Maps</span>
-                <ArrowUpRight className="h-3.5 w-3.5 opacity-50" />
               </Link>
             </div>
           </div>
