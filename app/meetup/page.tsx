@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Sparkles,
-  ArrowLeft,
-} from "lucide-react";
+import { ArrowUpRight, Sparkles, ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { Sponsors } from "@/components/Sponsors";
 import { ThreadedFlagBorder } from "@/components/ThreadedFlagBorder";
@@ -29,10 +25,6 @@ export default function MeetupPage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>Back to Omarchy Ethiopia</span>
           </Link>
-
-          <span className="font-mono text-xs text-cream/40">
-            2026
-          </span>
         </div>
 
         {/* Hero Banner framed by Ethiopian Flag Lines */}
@@ -42,7 +34,7 @@ export default function MeetupPage() {
           <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 text-center sm:text-left">
             <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1 font-mono text-[11px] font-medium text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Official Chapter Meetup
+              Official Community Meetup
             </span>
 
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
@@ -50,7 +42,7 @@ export default function MeetupPage() {
             </h1>
 
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-cream/75 sm:text-lg">
-              {meetup2026.fullDescription}
+              First of its kind gathering for the Omarchy community in Ethiopia.
             </p>
 
             {/* Action Bar */}
