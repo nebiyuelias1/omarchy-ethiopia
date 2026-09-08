@@ -1,0 +1,7 @@
+<svg width="512" height="192" viewBox="0 0 512 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="192" rx="12" fill="#141418"/>
+  <rect x="20" y="20" width="472" height="152" rx="10" stroke="#E5A93C" stroke-opacity="0.65"/>
+  <path d="M64 96H448" stroke="#2D6A4F" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="40" y="84" fill="#FDFBF7" font-family="JetBrains Mono, monospace" font-size="24">Omarchy Ethiopia</text>
+  <text x="40" y="122" fill="#E5A93C" font-family="JetBrains Mono, monospace" font-size="18">Event Partner Asset Slot</text>
+</svg>
