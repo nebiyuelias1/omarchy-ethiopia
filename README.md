@@ -29,3 +29,13 @@ npm run build
 # Run lint checks
 npm run lint
 ```
+
+## Deployment (GitHub Pages)
+
+The project is configured for automated deployment to GitHub Pages using GitHub Actions:
+
+1. In your GitHub repository, navigate to **Settings** > **Pages**.
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+3. Pushes to `main` (or manual triggers via `workflow_dispatch` in the Actions tab) will run [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), building the static export (`out/`) and publishing it to Pages.
+4. The configuration dynamically handles both custom domains (such as `omarchy.org.et`) and repository subpaths (such as `/omarchy-ethiopia`).
+
