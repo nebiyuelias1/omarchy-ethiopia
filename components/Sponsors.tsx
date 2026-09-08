@@ -57,7 +57,7 @@ export function Sponsors() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1 font-mono text-xs text-tibeb-gold hover:underline"
               >
-                <span>View partner assets & deck</span>
+                <span>{sponsor.linkLabel ?? `Visit ${sponsor.name}`}</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </div>

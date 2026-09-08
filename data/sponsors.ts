@@ -7,15 +7,17 @@ export type Sponsor = {
   href: string;
   logo: string | StaticImageData;
   description: string;
+  linkLabel?: string;
 };
 
 export const sponsors: Sponsor[] = [
   {
     name: "Tefer",
     tier: "Official Event Partner",
-    href: "https://drive.google.com/drive/folders/1vm1uudIWfNaSeh0jQbjXD20gEOZSRsCK?usp=sharing",
+    href: "https://tefer.io/",
     logo: teferLogo,
     description:
       "Primary event partner supporting developer connectivity, venue operations, and community logistics for Omarchy Ethiopia Meetup 2026.",
+    linkLabel: "Visit tefer.io",
   },
 ];
