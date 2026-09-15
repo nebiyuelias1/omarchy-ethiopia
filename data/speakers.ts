@@ -30,7 +30,7 @@ export const speakers: Speaker[] = [
     talk: "Nix for Omarchers",
     abstract:
       "The talk would try to introduce the audience to Nix and NixOS. Why it's interesting, How they could use it, Where it would be helpful for them in their development and system admin tasks, and some stuff about how the Omarchy project would benefit if it was based on NixOS.",
-    bio: "Full-stack developer from Addis Ababa, increasingly pulled toward systems programming with Rust and the database space. He publishes PostgreSQL extensions and open-source tooling under the handle frectonz, and writes about tech on his blog, Factorem. Previously CTO at EduMine. Just another guy addicted to coding.",
+    bio: "Full-stack developer from Addis Ababa, increasingly pulled toward systems programming with Rust and the database space. He publishes PostgreSQL extensions and open-source tooling under the handle frectonz, and writes about tech on his blog. Just another guy addicted to coding.",
     photo: fraolPhoto,
     avatar: "FL",
     contacts: [
