@@ -7,35 +7,18 @@ import { meetup2026 } from "@/data/event";
 export function Sponsors() {
   return (
     <section id="partners" className="w-full">
-      <div className="flex flex-col gap-1.5">
-        <p className="font-mono text-xs uppercase tracking-widest text-tibeb-gold">
-          PARTNERS & SPONSORS
-        </p>
-        <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-          Supported by Builders
-        </h2>
-        <p className="text-sm text-cream/65 max-w-xl">
-          Generous partners backing developer connectivity, venue space, and open-source operations across Ethiopia.
-        </p>
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+        Sponsors
+      </h2>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {/* Dedicated Tefer Partner Badge */}
+      <div className="mt-10 space-y-4">
         {sponsors.map((sponsor) => (
           <article
             key={sponsor.name}
-            className="flex flex-col justify-between rounded-xl border border-white/10 bg-[#0e0f14] p-6 transition hover:border-tibeb-gold/50"
+            className="flex flex-col gap-5 rounded-xl border border-white/10 bg-[#0e0f14] p-6 transition hover:border-tibeb-gold/40 sm:flex-row sm:items-center sm:justify-between"
           >
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="rounded border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-medium text-emerald-400">
-                  {sponsor.tier}
-                </span>
-                <span className="font-mono text-xs text-cream/40">2026</span>
-              </div>
-
-              {/* Logo */}
-              <div className="relative mt-6 h-16 w-44">
+            <div className="flex flex-wrap items-center gap-6">
+              <div className="relative h-14 w-40">
                 <Image
                   src={sponsor.logo}
                   alt={`${sponsor.name} logo`}
@@ -44,51 +27,37 @@ export function Sponsors() {
                   priority
                 />
               </div>
-
-              <p className="mt-4 text-sm leading-relaxed text-cream/70">
-                {sponsor.description}
-              </p>
+              <span className="rounded border border-emerald-500/40 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[11px] font-medium text-emerald-400">
+                {sponsor.tier}
+              </span>
             </div>
 
-            <div className="mt-6 border-t border-white/[0.06] pt-4">
-              <Link
-                href={sponsor.href}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 font-mono text-xs text-tibeb-gold hover:underline"
-              >
-                <span>{sponsor.linkLabel ?? `Visit ${sponsor.name}`}</span>
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
+            <Link
+              href={sponsor.href}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 font-mono text-xs text-tibeb-gold hover:underline"
+            >
+              <span>{sponsor.linkLabel ?? `Visit ${sponsor.name}`}</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </article>
         ))}
 
         {/* Community Sponsor Callout */}
-        <article className="flex flex-col justify-between rounded-xl border border-dashed border-white/15 bg-[#0e0f14]/60 p-6 transition hover:border-white/30">
-          <div>
-            <span className="rounded border border-tibeb-gold/40 bg-tibeb-gold/10 px-2.5 py-0.5 font-mono text-[11px] font-medium text-tibeb-gold">
-              Sponsorship Open
-            </span>
-            <h3 className="mt-4 text-lg font-semibold text-white">
-              Support Ethiopian Open Source
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-cream/65">
-              Help fund venue space, buna ceremonies, high-speed builder connectivity, and student hardware kits.
-            </p>
-          </div>
-
-          <div className="mt-6 border-t border-white/[0.06] pt-4">
-            <Link
-              href={meetup2026.sponsorDeck}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 font-mono text-xs text-tibeb-gold hover:underline"
-            >
-              <span>Access Sponsor Deck (Google Drive)</span>
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
+        <article className="flex flex-col gap-4 rounded-xl border border-dashed border-white/15 p-6 transition hover:border-white/30 sm:flex-row sm:items-center sm:justify-between">
+          <h3 className="text-lg font-semibold text-white">
+            Support Ethiopian Open Source
+          </h3>
+          <Link
+            href={meetup2026.sponsorDeck}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs text-tibeb-gold hover:underline"
+          >
+            <span>Access Sponsor Deck</span>
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </Link>
         </article>
       </div>
     </section>

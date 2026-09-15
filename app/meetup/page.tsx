@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Sparkles, ArrowLeft } from "lucide-react";
+import { ArrowUpRight, ArrowLeft } from "lucide-react";
 import { Footer } from "@/components/Footer";
+import { Speakers } from "@/components/Speakers";
 import { Sponsors } from "@/components/Sponsors";
-import { ThreadedFlagBorder } from "@/components/ThreadedFlagBorder";
 import { meetup2026, registrationLink } from "@/data/event";
 
 export const metadata: Metadata = {
   title: "Meetup 2026",
   description:
-    "Omarchy Ethiopia Meetup 2026. Embedded Luma registration and partner showcase.",
+    "Omarchy Ethiopia Meetup 2026. Featured speakers, talk sessions, embedded Luma registration, and partner showcase.",
 };
 
 export default function MeetupPage() {
@@ -27,16 +27,9 @@ export default function MeetupPage() {
           </Link>
         </div>
 
-        {/* Hero Banner framed by Ethiopian Flag Lines */}
+        {/* Hero Banner */}
         <section className="relative w-full">
-          <ThreadedFlagBorder />
-
           <div className="mx-auto w-full max-w-4xl px-6 py-16 sm:py-20 text-center sm:text-left">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1 font-mono text-[11px] font-medium text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Official Community Meetup
-            </span>
-
             <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
               {meetup2026.name}
             </h1>
@@ -56,66 +49,54 @@ export default function MeetupPage() {
                 <span>Open in Luma</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
+              <a
+                href="#speakers"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.03] px-5 py-3 font-semibold text-cream/90 transition hover:border-tibeb-gold hover:text-tibeb-gold"
+              >
+                <span>Featured Speakers</span>
+              </a>
+              <a
+                href="#rsvp"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 px-5 py-3 text-cream/70 transition hover:border-white/30 hover:text-white"
+              >
+                <span>RSVP Below</span>
+              </a>
             </div>
           </div>
-
-          <ThreadedFlagBorder />
         </section>
 
-        {/* Embedded Luma Registration Card */}
+        {/* Main Content Area */}
         <div className="mx-auto w-full max-w-4xl px-6 py-16">
-          <section id="rsvp" className="w-full">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-mono text-xs uppercase tracking-widest text-tibeb-gold">
-                  RSVP &amp; REGISTRATION
-                </p>
-                <h2 className="mt-1 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                  Reserve Your Seat
-                </h2>
+          {/* Featured Speakers Section */}
+          <Speakers />
+
+          {/* Embedded Luma Registration Card */}
+          <div className="mt-24 pt-12 border-t border-white/[0.08]">
+            <section id="rsvp" className="w-full">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Reserve Your Seat
+              </h2>
+
+              <div className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-[#0e0f14] shadow-2xl">
+                <iframe
+                  src="https://luma.com/embed/event/evt-lNdN45JFBUoPvbk/simple"
+                  width="100%"
+                  height="560"
+                  frameBorder="0"
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    minHeight: "560px",
+                    colorScheme: "dark",
+                  }}
+                  allowFullScreen
+                  aria-hidden="false"
+                  tabIndex={0}
+                  title="Omarchy Ethiopia Meetup 2026 Registration"
+                />
               </div>
-              <span className="hidden sm:inline-flex items-center gap-1.5 font-mono text-xs text-emerald-400">
-                <Sparkles className="h-3.5 w-3.5" />
-                Free General Admission
-              </span>
-            </div>
-
-            <p className="mt-2 text-sm text-cream/65">
-              RSVP directly through the embedded Luma widget below.
-            </p>
-
-            <div className="mt-6 overflow-hidden rounded-xl border border-white/10 bg-[#0e0f14] shadow-2xl">
-              <iframe
-                src="https://luma.com/embed/event/evt-lNdN45JFBUoPvbk/simple"
-                width="100%"
-                height="560"
-                frameBorder="0"
-                style={{
-                  border: "none",
-                  width: "100%",
-                  minHeight: "560px",
-                  colorScheme: "dark",
-                }}
-                allowFullScreen
-                aria-hidden="false"
-                tabIndex={0}
-                title="Omarchy Ethiopia Meetup 2026 Registration"
-              />
-            </div>
-
-            <div className="mt-3 flex items-center justify-between font-mono text-xs text-cream/40">
-              <span>Direct registration URL:</span>
-              <Link
-                href={registrationLink}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-tibeb-gold hover:underline"
-              >
-                <span>https://luma.com/zh5jv195</span>
-                <ArrowUpRight className="h-3 w-3" />
-              </Link>
-            </div>
-          </section>
+            </section>
+          </div>
 
           {/* Moved Partners & Sponsors to Meetup Page */}
           <div className="mt-24 pt-12 border-t border-white/[0.08]">
