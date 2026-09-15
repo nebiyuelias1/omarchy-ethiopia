@@ -32,10 +32,7 @@ export function Hero() {
         {/* Word-by-word Description from omarchy.org */}
         <p className="mt-4 max-w-xl text-sm sm:text-base md:text-lg text-cream/70 leading-relaxed font-normal">
           <span className="block">
-            The linux distro with a bunch of pathetic haters
-          </span>
-          <span className="block mt-1 text-cream/60">
-            now has a dedicated Ethiopian community.
+            A dedicated community in Ethiopia for Omarchy
           </span>
         </p>
 
