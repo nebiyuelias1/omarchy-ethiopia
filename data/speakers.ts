@@ -25,7 +25,7 @@ export const speakers: Speaker[] = [
   {
     slug: "fraol-lemecha",
     name: "Fraol Lemecha",
-    role: "Software Developer",
+    role: "Software Developer at EVpin",
     experience: "Intermediate",
     talk: "Nix for Omarchers",
     abstract:
