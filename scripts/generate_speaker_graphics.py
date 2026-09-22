@@ -364,27 +364,6 @@ def render_single_speaker_square(speaker, tefer_b64):
     object-position: {speaker.get("img_position", "center 15%")};
     display: block;
   }}
-
-  .portrait-bottom-banner {{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 24px 20px 18px 20px;
-    background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 12, 0.95) 90%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
-  }}
-
-  .bottom-flag-micro {{
-    display: flex;
-    height: 3px;
-    width: 60px;
-    border-radius: 2px;
-    overflow: hidden;
-  }}
 </style>
 </head>
 <body>
@@ -450,17 +429,6 @@ def render_single_speaker_square(speaker, tefer_b64):
       <div class="portrait-container">
         <div class="portrait-frame">
           <img src="{speaker['photo_b64']}" alt="{speaker['name']}" class="portrait-image" />
-
-          <div class="portrait-bottom-banner">
-            <div class="bottom-flag-micro">
-              <div style="flex: 1; background: #10b981;"></div>
-              <div style="flex: 1; background: #fbbf24;"></div>
-              <div style="flex: 1; background: #ef4444;"></div>
-            </div>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #94a3b8; letter-spacing: 0.1em;">
-              ADDIS ABABA
-            </span>
-          </div>
         </div>
       </div>
     </main>
