@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 import fraolPhoto from "@/public/assets/speakers/fraol-lemecha.jpg";
 import dagimPhoto from "@/public/assets/speakers/dagim-gizachew.jpg";
+import eyuelPhoto from "@/public/assets/speakers/eyuel-getachew.jpg";
 
 export type SpeakerContact = {
   label: string;
@@ -64,6 +65,22 @@ export const speakers: Speaker[] = [
       },
       { label: "X", href: "https://x.com/dagimg_dot" },
       { label: "Email", href: "mailto:dagim.astatkie@gmail.com" },
+    ],
+  },
+  {
+    slug: "eyuel-getachew",
+    name: "Eyuel Getachew",
+    role: "Software Developer",
+    experience: "Intermediate",
+    talk: "Beyond the rice: Building an Agentic Desktop on fedora 44 with omarchy principles",
+    abstract:
+      "Linux customization is often notorious for its grueling but rewarding process called \"ricing\" in the linux community. But when your workstation is your daily driver for developing production software, managing AI agents, aesthetics cannot come at a cost of stability, & developer pace. Inspired by Omarchy's hypr-minimalistic, keyboard-first manifesto, this talk demonstrates how to build \"Agentic Desktop\" dailydriver on fedora 44, while paying homage to Omarchy.",
+    bio: "I'm a passionate developer dedicated to crafting elegant, responsive, and high-performance user interfaces. I bridge the gap between complex backend logic and intuitive frontend design while harboring a deep love for linux.",
+    photo: eyuelPhoto,
+    avatar: "EG",
+    contacts: [
+      { label: "GitHub", href: "https://github.com/EyuReaper" },
+      { label: "Email", href: "mailto:eyureaper@gmail.com" },
     ],
   },
 ];

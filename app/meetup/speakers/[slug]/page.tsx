@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, Presentation } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Download, Presentation } from "lucide-react";
 import { Footer } from "@/components/Footer";
 import { speakers } from "@/data/speakers";
 
@@ -120,13 +120,28 @@ export default async function SpeakerPage({
               </p>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 href="/meetup#rsvp"
-                className="inline-flex items-center gap-2 rounded-lg bg-tibeb-gold px-5 py-3 font-mono text-xs font-bold text-black transition hover:bg-tibeb-gold-bright"
+                className="inline-flex items-center gap-2 rounded-lg bg-tibeb-gold px-5 py-3 font-mono text-xs font-bold text-black transition hover:bg-tibeb-gold-bright shadow-md"
               >
                 <span>RSVP for Meetup 2026</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
+              <a
+                href={`/assets/graphics/speaker-${speaker.slug}-square.png`}
+                download
+                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.03] px-4 py-3 font-mono text-xs font-semibold text-cream/90 transition hover:border-tibeb-gold hover:text-tibeb-gold"
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span>Speaker Graphic (PNG)</span>
+              </a>
+              <Link
+                href="/meetup/graphics"
+                className="inline-flex items-center gap-1 font-mono text-xs text-cream/50 hover:text-tibeb-gold transition"
+              >
+                <span>All Graphics</span>
+                <ArrowUpRight className="h-3 w-3" />
               </Link>
             </div>
           </div>

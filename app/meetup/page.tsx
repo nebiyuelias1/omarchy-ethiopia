@@ -61,6 +61,13 @@ export default function MeetupPage() {
               >
                 <span>RSVP Below</span>
               </a>
+              <Link
+                href="/meetup/graphics"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-tibeb-gold/30 bg-tibeb-gold/10 px-5 py-3 font-semibold text-tibeb-gold transition hover:border-tibeb-gold hover:bg-tibeb-gold/20"
+              >
+                <span>Speaker Graphics</span>
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
         </section>
