@@ -13,6 +13,5 @@ export const meetup2026 = {
     "The malleable OS for the age of agents. Vibe your way through every alteration, tweak, or trouble.",
   upstreamDocs: "https://omarchy.org",
   github: "https://github.com/omacom/omarchy",
-  sponsorDeck:
-    "https://drive.google.com/drive/folders/1vm1uudIWfNaSeh0jQbjXD20gEOZSRsCK?usp=sharing",
+  sponsorDeck: "/meetup/deck",
 } as const;

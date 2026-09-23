@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { sponsors } from "@/data/sponsors";
-import { meetup2026 } from "@/data/event";
 
 export function Sponsors() {
   return (
@@ -43,22 +42,6 @@ export function Sponsors() {
             </Link>
           </article>
         ))}
-
-        {/* Community Sponsor Callout */}
-        <article className="flex flex-col gap-4 rounded-xl border border-dashed border-white/15 p-6 transition hover:border-white/30 sm:flex-row sm:items-center sm:justify-between">
-          <h3 className="text-lg font-semibold text-white">
-            Support Ethiopian Open Source
-          </h3>
-          <Link
-            href={meetup2026.sponsorDeck}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-xs text-tibeb-gold hover:underline"
-          >
-            <span>Access Sponsor Deck</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-        </article>
       </div>
     </section>
   );
