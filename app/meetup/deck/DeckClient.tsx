@@ -66,7 +66,8 @@ export function DeckClient() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [nextSlide, prevSlide, viewMode]);
 
-  const officialPartner = sponsors.find((s) => s.tier === "Official Event Partner") || sponsors[0];
+  const officialPartner =
+    sponsors.find((s) => s.tier === "Official Event Partner") || sponsors[0];
 
   return (
     <div className="min-h-screen bg-[#06070a] text-cream flex flex-col justify-between selection:bg-tibeb-gold/20 selection:text-white print:bg-[#08090c] print:p-0">
@@ -311,28 +312,32 @@ function renderSlideContent(slide: number, officialPartner: any) {
 
           <div className="my-auto">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-none">
-              OMARCHY<br />
+              OMARCHY
+              <br />
               <span className="text-tibeb-gold">ETHIOPIA</span>
             </h1>
             <p className="mt-4 max-w-2xl font-mono text-sm sm:text-base text-cream/70 leading-relaxed">
-              The Malleable OS for the Age of Agents. Gathering Addis Ababa&apos;s sharpest systems, Linux, and AI engineers.
+              The Malleable OS for the Age of Agents. Gathering Addis
+              Ababa&apos;s sharpest systems, Linux, and AI engineers.
             </p>
           </div>
 
           <div className="pt-6 border-t border-white/10 flex flex-wrap items-end justify-between gap-4 font-mono text-xs">
             <div>
               <div className="flex items-center gap-1.5 text-white font-semibold">
-                <Calendar className="h-3.5 w-3.5 text-tibeb-gold" />
-                <span>Saturday, October 3, 2026</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-cream/50 mt-1">
-                <MapPin className="h-3.5 w-3.5" />
+                <MapPin className="h-3.5 w-3.5 text-tibeb-gold" />
                 <span>Addis Ababa, Ethiopia</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-cream/50 mt-1 font-mono text-[11px]">
+                <Calendar className="h-3 w-3 text-cream/40" />
+                <span>Date: To Be Announced</span>
               </div>
             </div>
 
             <div className="text-right">
-              <span className="text-tibeb-gold font-semibold">omarchy.org.et/meetup</span>
+              <span className="text-tibeb-gold font-semibold">
+                omarchy.org.et/meetup
+              </span>
               <p className="text-cream/50 text-[11px] mt-0.5">
                 Official Partner: {officialPartner?.name || "Tefer"}
               </p>
@@ -345,7 +350,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">01 • The Vision</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              01 • The Vision
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Where Ethiopian Engineering Meets Modern Linux & AI
             </h2>
@@ -357,9 +364,13 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-tibeb-gold uppercase tracking-wider font-semibold">
                   The Shift
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1">Autonomous Agents</h3>
+                <h3 className="text-lg font-bold text-white mt-1">
+                  Autonomous Agents
+                </h3>
                 <p className="text-xs text-cream/70 mt-2 leading-relaxed">
-                  Tools like Claude Code, Antigravity, and local LLMs require keyboard-first, distraction-free operating environments engineered for speed.
+                  Tools like Claude Code, Antigravity, and local LLMs require
+                  keyboard-first, distraction-free operating environments
+                  engineered for speed.
                 </p>
               </div>
             </div>
@@ -369,9 +380,13 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-tibeb-gold uppercase tracking-wider font-semibold">
                   The Platform
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1">Omarchy Linux</h3>
+                <h3 className="text-lg font-bold text-white mt-1">
+                  Omarchy Linux
+                </h3>
                 <p className="text-xs text-cream/75 mt-2 leading-relaxed">
-                  Created by DHH (creator of Ruby on Rails & 37signals), Omarchy is a malleable, beautiful Linux distro tailored specifically for modern software engineers.
+                  Created by DHH (creator of Ruby on Rails & 37signals), Omarchy
+                  is a malleable, beautiful Linux distro tailored specifically
+                  for modern software engineers.
                 </p>
               </div>
             </div>
@@ -381,16 +396,22 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-ethiopia-green uppercase tracking-wider font-semibold">
                   The Community
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1">Ethiopian Chapter</h3>
+                <h3 className="text-lg font-bold text-white mt-1">
+                  Ethiopian Chapter
+                </h3>
                 <p className="text-xs text-cream/70 mt-2 leading-relaxed">
-                  Uniting local systems programmers, open-source contributors, and backend engineers to share production craft and connect with upstream development.
+                  Uniting local systems programmers, open-source contributors,
+                  and backend engineers to share production craft and connect
+                  with upstream development.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="pt-4 border-t border-white/10 font-mono text-xs text-cream/50 flex justify-between">
-            <span>Goal: Elevate the local systems and developer tooling culture.</span>
+            <span>
+              Goal: Elevate the local systems and developer tooling culture.
+            </span>
             <span className="text-tibeb-gold">omarchy.org.et</span>
           </div>
         </>
@@ -400,7 +421,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">02 • Community Profile</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              02 • Community Profile
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Curated Access to the Top 5% Engineering Talent
             </h2>
@@ -411,9 +434,12 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <div className="font-mono text-4xl sm:text-5xl font-extrabold text-tibeb-gold">
                 100–150
               </div>
-              <h3 className="text-base font-bold text-white mt-2">In-Person Attendees</h3>
+              <h3 className="text-base font-bold text-white mt-2">
+                In-Person Attendees
+              </h3>
               <p className="text-xs text-cream/70 mt-1">
-                Curated and registered via Luma. High-intent engineers and technical founders.
+                Curated and registered via Luma. High-intent engineers and
+                technical founders.
               </p>
             </div>
 
@@ -421,9 +447,12 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <div className="font-mono text-4xl sm:text-5xl font-extrabold text-white">
                 100%
               </div>
-              <h3 className="text-base font-bold text-white mt-2">Technical Focus</h3>
+              <h3 className="text-base font-bold text-white mt-2">
+                Technical Focus
+              </h3>
               <p className="text-xs text-cream/70 mt-1">
-                Zero generalist fluff. Dedicated to Linux, systems programming, and AI tools.
+                Zero generalist fluff. Dedicated to Linux, systems programming,
+                and AI tools.
               </p>
             </div>
 
@@ -431,16 +460,20 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <div className="font-mono text-4xl sm:text-5xl font-extrabold text-ethiopia-green">
                 300+
               </div>
-              <h3 className="text-base font-bold text-white mt-2">Digital Community Reach</h3>
+              <h3 className="text-base font-bold text-white mt-2">
+                Digital Community Reach
+              </h3>
               <p className="text-xs text-cream/70 mt-1">
-                Active pre- and post-event discussions across Telegram, GitHub, and X.
+                Active pre- and post-event discussions across Telegram, GitHub,
+                and X.
               </p>
             </div>
           </div>
 
           <div className="rounded-xl border border-white/10 bg-[#0e0f14] px-6 py-3.5 flex flex-wrap items-center justify-around gap-4 font-mono text-xs">
             <span className="text-cream/80">
-              <strong className="text-white">55%</strong> Senior Software Engineers
+              <strong className="text-white">55%</strong> Senior Software
+              Engineers
             </span>
             <span className="text-cream/80">
               <strong className="text-tibeb-gold">25%</strong> Systems & Backend
@@ -449,7 +482,8 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <strong className="text-white">15%</strong> AI Agents & DevOps
             </span>
             <span className="text-cream/80">
-              <strong className="text-ethiopia-green">5%</strong> Tech Leads & Founders
+              <strong className="text-ethiopia-green">5%</strong> Tech Leads &
+              Founders
             </span>
           </div>
         </>
@@ -459,7 +493,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">03 • Program</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              03 • Program
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Production-Grade Engineering Talks
             </h2>
@@ -475,7 +511,12 @@ function renderSlideContent(slide: number, officialPartner: any) {
                   <div className="flex items-center gap-3">
                     <div className="relative h-10 w-10 overflow-hidden rounded-full border border-tibeb-gold/40 bg-zinc-900 flex-shrink-0">
                       {s.photo ? (
-                        <Image src={s.photo} alt={s.name} fill className="object-cover" />
+                        <Image
+                          src={s.photo}
+                          alt={s.name}
+                          fill
+                          className="object-cover"
+                        />
                       ) : (
                         <span className="flex h-full w-full items-center justify-center font-mono text-xs font-bold text-tibeb-gold">
                           {s.avatar}
@@ -483,8 +524,12 @@ function renderSlideContent(slide: number, officialPartner: any) {
                       )}
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-white line-clamp-1">{s.name}</h4>
-                      <p className="font-mono text-[11px] text-cream/50 line-clamp-1">{s.role}</p>
+                      <h4 className="text-sm font-bold text-white line-clamp-1">
+                        {s.name}
+                      </h4>
+                      <p className="font-mono text-[11px] text-cream/50 line-clamp-1">
+                        {s.role}
+                      </p>
                     </div>
                   </div>
 
@@ -504,7 +549,8 @@ function renderSlideContent(slide: number, officialPartner: any) {
           </div>
 
           <div className="pt-4 border-t border-white/10 font-mono text-xs text-cream/50">
-            Speakers representing top local tech companies: EVpin, klik.et, and open-source tooling creators.
+            Speakers representing top local tech companies: EVpin, klik.et, and
+            open-source tooling creators.
           </div>
         </>
       );
@@ -513,7 +559,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">04 • Value Proposition</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              04 • Value Proposition
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Why Sponsor Omarchy Ethiopia?
             </h2>
@@ -525,9 +573,13 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-tibeb-gold uppercase font-bold tracking-wider">
                   01 • Talent Pipeline
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1.5">Direct Engineering Hiring</h3>
+                <h3 className="text-lg font-bold text-white mt-1.5">
+                  Direct Engineering Hiring
+                </h3>
                 <p className="text-xs text-cream/70 mt-2 leading-relaxed">
-                  Senior Linux, systems, and backend engineers are the hardest talent to find in Addis Ababa. Sponsoring gives you direct access to 100+ builders without recruiter fees.
+                  Senior Linux, systems, and backend engineers are the hardest
+                  talent to find in Addis Ababa. Sponsoring gives you direct
+                  access to 100+ builders without recruiter fees.
                 </p>
               </div>
             </div>
@@ -537,9 +589,13 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-ethiopia-green uppercase font-bold tracking-wider">
                   02 • Brand Prestige
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1.5">Engineering-First Image</h3>
+                <h3 className="text-lg font-bold text-white mt-1.5">
+                  Engineering-First Image
+                </h3>
                 <p className="text-xs text-cream/70 mt-2 leading-relaxed">
-                  Position your company as a pioneer that invests in open source, developer ergonomics, and local technical infrastructure.
+                  Position your company as a pioneer that invests in open
+                  source, developer ergonomics, and local technical
+                  infrastructure.
                 </p>
               </div>
             </div>
@@ -549,16 +605,21 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <span className="font-mono text-[10px] text-white uppercase font-bold tracking-wider">
                   03 • Dev Tool Adoption
                 </span>
-                <h3 className="text-lg font-bold text-white mt-1.5">APIs & Cloud Adoption</h3>
+                <h3 className="text-lg font-bold text-white mt-1.5">
+                  APIs & Cloud Adoption
+                </h3>
                 <p className="text-xs text-cream/70 mt-2 leading-relaxed">
-                  Showcase your developer APIs, cloud platforms, fintech rails, or tools directly to the power-users who implement architecture in production.
+                  Showcase your developer APIs, cloud platforms, fintech rails,
+                  or tools directly to the power-users who implement
+                  architecture in production.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="pt-4 border-t border-white/10 font-mono text-xs text-cream/50">
-            Immediate ROI: High-density engagement with serious engineering builders.
+            Immediate ROI: High-density engagement with serious engineering
+            builders.
           </div>
         </>
       );
@@ -567,7 +628,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">05 • Pricing</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              05 • Pricing
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Grassroots Sponsorship Tiers
             </h2>
@@ -580,15 +643,20 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <div className="inline-block rounded bg-tibeb-gold/20 px-2 py-0.5 font-mono text-[10px] font-bold text-tibeb-gold">
                   LEAD
                 </div>
-                <div className="mt-2 font-mono text-2xl font-extrabold text-tibeb-gold">
-                  20,000 <span className="text-xs font-normal text-cream/70">ETB</span>
+                <div className="mt-2 font-mono text-3xl sm:text-4xl font-extrabold text-tibeb-gold">
+                  20,000{" "}
+                  <span className="text-xs font-normal text-cream/70">ETB</span>
                 </div>
-                <ul className="mt-3 space-y-1.5 font-mono text-[11px] text-cream/80">
-                  <li className="flex items-start gap-1.5">• Top logo on site & Luma</li>
-                  <li className="flex items-start gap-1.5">• Roll-up banner in hall</li>
-                  <li className="flex items-start gap-1.5">• 2-min stage welcome</li>
-                  <li className="flex items-start gap-1.5">• Company swag on tables</li>
-                  <li className="flex items-start gap-1.5">• 4 VIP Passes</li>
+                <ul className="mt-3 space-y-2 font-mono text-[11px] text-cream/80">
+                  <li className="flex items-start gap-1.5">
+                    • Top logo on site, Luma & slides
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • Hall banner & table recruitment swag
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • <strong>2-min stage welcome & tech intro</strong>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -599,15 +667,20 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <div className="inline-block rounded bg-white/10 px-2 py-0.5 font-mono text-[10px] font-bold text-white">
                   COMMUNITY
                 </div>
-                <div className="mt-2 font-mono text-2xl font-extrabold text-white">
-                  15,000 <span className="text-xs font-normal text-cream/70">ETB</span>
+                <div className="mt-2 font-mono text-3xl sm:text-4xl font-extrabold text-white">
+                  15,000{" "}
+                  <span className="text-xs font-normal text-cream/70">ETB</span>
                 </div>
-                <ul className="mt-3 space-y-1.5 font-mono text-[11px] text-cream/80">
-                  <li className="flex items-start gap-1.5">• Logo on site & Luma</li>
-                  <li className="flex items-start gap-1.5">• Stage slides logo</li>
-                  <li className="flex items-start gap-1.5">• MC shoutout & hiring plug</li>
-                  <li className="flex items-start gap-1.5">• Swag at reception desk</li>
-                  <li className="flex items-start gap-1.5">• 2 VIP Passes</li>
+                <ul className="mt-3 space-y-2 font-mono text-[11px] text-cream/80">
+                  <li className="flex items-start gap-1.5">
+                    • Logo on site & event slides
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • MC stage shoutout & hiring plug
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • <strong>Company swag distribution at desk</strong>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -618,14 +691,20 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <div className="inline-block rounded bg-white/10 px-2 py-0.5 font-mono text-[10px] font-bold text-cream/70">
                   SUPPORTER
                 </div>
-                <div className="mt-2 font-mono text-2xl font-extrabold text-white">
-                  10,000 <span className="text-xs font-normal text-cream/70">ETB</span>
+                <div className="mt-2 font-mono text-3xl sm:text-4xl font-extrabold text-white">
+                  10,000{" "}
+                  <span className="text-xs font-normal text-cream/70">ETB</span>
                 </div>
-                <ul className="mt-3 space-y-1.5 font-mono text-[11px] text-cream/80">
-                  <li className="flex items-start gap-1.5">• Logo on website</li>
-                  <li className="flex items-start gap-1.5">• Telegram group thank-you</li>
-                  <li className="flex items-start gap-1.5">• MC opening mention</li>
-                  <li className="flex items-start gap-1.5">• 2 VIP Passes</li>
+                <ul className="mt-3 space-y-2 font-mono text-[11px] text-cream/80">
+                  <li className="flex items-start gap-1.5">
+                    • Logo on website sponsors list
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • Dedicated community feature
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • <strong>MC opening & closing event mention</strong>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -636,21 +715,28 @@ function renderSlideContent(slide: number, officialPartner: any) {
                 <div className="inline-block rounded bg-white/10 px-2 py-0.5 font-mono text-[10px] font-bold text-cream/70">
                   CHAMPION
                 </div>
-                <div className="mt-2 font-mono text-2xl font-extrabold text-ethiopia-green">
-                  5,000 <span className="text-xs font-normal text-cream/70">ETB</span>
+                <div className="mt-2 font-mono text-3xl sm:text-4xl font-extrabold text-ethiopia-green">
+                  5,000{" "}
+                  <span className="text-xs font-normal text-cream/70">ETB</span>
                 </div>
-                <ul className="mt-3 space-y-1.5 font-mono text-[11px] text-cream/80">
-                  <li className="flex items-start gap-1.5">• Name/handle on site</li>
-                  <li className="flex items-start gap-1.5">• Personal Telegram shoutout</li>
-                  <li className="flex items-start gap-1.5">• Official sticker pack</li>
-                  <li className="flex items-start gap-1.5">• 1 VIP Pass</li>
+                <ul className="mt-3 space-y-2 font-mono text-[11px] text-cream/80">
+                  <li className="flex items-start gap-1.5">
+                    • Name & handle on website
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • Personal community shoutout
+                  </li>
+                  <li className="flex items-start gap-1.5">
+                    • <strong>Official Omarchy sticker pack</strong>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div className="pt-4 border-t border-white/10 font-mono text-xs text-cream/50">
-            Frictionless sign-off: Designed for direct petty cash or individual leader contribution.
+            Frictionless sign-off: Designed for direct petty cash or individual
+            leader contribution.
           </div>
         </>
       );
@@ -659,7 +745,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">06 • In-Kind Support</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              06 • In-Kind Support
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Operational Partnerships Welcome
             </h2>
@@ -668,51 +756,80 @@ function renderSlideContent(slide: number, officialPartner: any) {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-auto">
             <div className="rounded-xl border border-white/10 bg-[#0e0f14] p-4 flex flex-col justify-between">
               <div>
-                <span className="font-mono text-xs font-bold text-tibeb-gold">VENUE</span>
-                <h4 className="text-base font-bold text-white mt-1">Venue & Wi-Fi</h4>
+                <span className="font-mono text-xs font-bold text-tibeb-gold">
+                  VENUE
+                </span>
+                <h4 className="text-base font-bold text-white mt-1">
+                  Venue & Wi-Fi
+                </h4>
                 <p className="text-xs text-cream/70 mt-2">
-                  Auditorium for 100–150 seats with reliable high-speed connectivity and power backup.
+                  Auditorium for 100–150 seats with reliable high-speed
+                  connectivity and power backup.
                 </p>
               </div>
-              <span className="font-mono text-[10px] text-cream/40 mt-4">= Lead Sponsor Tier</span>
+              <span className="font-mono text-[10px] text-cream/40 mt-4">
+                = Lead Sponsor Tier
+              </span>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-[#0e0f14] p-4 flex flex-col justify-between">
               <div>
-                <span className="font-mono text-xs font-bold text-tibeb-gold">COFFEE</span>
-                <h4 className="text-base font-bold text-white mt-1">Catering & Coffee</h4>
+                <span className="font-mono text-xs font-bold text-tibeb-gold">
+                  COFFEE
+                </span>
+                <h4 className="text-base font-bold text-white mt-1">
+                  Catering & Coffee
+                </h4>
                 <p className="text-xs text-cream/70 mt-2">
-                  Traditional Ethiopian coffee ceremony, bottled water, and refreshment snack catering.
+                  Traditional Ethiopian coffee ceremony, bottled water, and
+                  refreshment snack catering.
                 </p>
               </div>
-              <span className="font-mono text-[10px] text-cream/40 mt-4">= Community Tier</span>
+              <span className="font-mono text-[10px] text-cream/40 mt-4">
+                = Community Tier
+              </span>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-[#0e0f14] p-4 flex flex-col justify-between">
               <div>
-                <span className="font-mono text-xs font-bold text-tibeb-gold">SWAG</span>
-                <h4 className="text-base font-bold text-white mt-1">Swag & Printing</h4>
+                <span className="font-mono text-xs font-bold text-tibeb-gold">
+                  SWAG
+                </span>
+                <h4 className="text-base font-bold text-white mt-1">
+                  Swag & Printing
+                </h4>
                 <p className="text-xs text-cream/70 mt-2">
-                  Printing custom Omarchy Ethiopia T-shirts, attendee stickers, and stage banners.
+                  Printing custom Omarchy Ethiopia T-shirts, attendee stickers,
+                  and stage banners.
                 </p>
               </div>
-              <span className="font-mono text-[10px] text-cream/40 mt-4">= Community Tier</span>
+              <span className="font-mono text-[10px] text-cream/40 mt-4">
+                = Community Tier
+              </span>
             </div>
 
             <div className="rounded-xl border border-white/10 bg-[#0e0f14] p-4 flex flex-col justify-between">
               <div>
-                <span className="font-mono text-xs font-bold text-tibeb-gold">MEDIA</span>
-                <h4 className="text-base font-bold text-white mt-1">Video & Audio</h4>
+                <span className="font-mono text-xs font-bold text-tibeb-gold">
+                  MEDIA
+                </span>
+                <h4 className="text-base font-bold text-white mt-1">
+                  Video & Audio
+                </h4>
                 <p className="text-xs text-cream/70 mt-2">
-                  Multi-camera 4K talk recording, high-fidelity audio capture, and talk archiving.
+                  Multi-camera 4K talk recording, high-fidelity audio capture,
+                  and talk archiving.
                 </p>
               </div>
-              <span className="font-mono text-[10px] text-cream/40 mt-4">= Supporter Tier</span>
+              <span className="font-mono text-[10px] text-cream/40 mt-4">
+                = Supporter Tier
+              </span>
             </div>
           </div>
 
           <div className="pt-4 border-t border-white/10 font-mono text-xs text-cream/50">
-            In-kind sponsors receive full equivalent tier branding across all digital and print assets.
+            In-kind sponsors receive full equivalent tier branding across all
+            digital and print assets.
           </div>
         </>
       );
@@ -721,7 +838,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
       return (
         <>
           <div>
-            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">07 • Next Steps</span>
+            <span className="font-mono text-xs text-tibeb-gold uppercase tracking-wider">
+              07 • Next Steps
+            </span>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">
               Partner With Us
             </h2>
@@ -732,9 +851,12 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <span className="font-mono text-[10px] text-tibeb-gold uppercase font-bold tracking-wider">
                 Event Partner
               </span>
-              <h3 className="text-lg font-bold text-white mt-1">{officialPartner?.name || "Tefer"}</h3>
+              <h3 className="text-lg font-bold text-white mt-1">
+                {officialPartner?.name || "Tefer"}
+              </h3>
               <p className="text-xs text-cream/70 mt-2">
-                Official Event Partner supporting developer connectivity and community logistics.
+                Official Event Partner supporting developer connectivity and
+                community logistics.
               </p>
             </div>
 
@@ -742,7 +864,9 @@ function renderSlideContent(slide: number, officialPartner: any) {
               <span className="font-mono text-[10px] text-ethiopia-green uppercase font-bold tracking-wider">
                 Registration Hub
               </span>
-              <h3 className="text-lg font-bold text-white mt-1">Live on Luma</h3>
+              <h3 className="text-lg font-bold text-white mt-1">
+                Live on Luma
+              </h3>
               <p className="text-xs text-cream/70 mt-2 font-mono">
                 luma.com/zh5jv195
               </p>
@@ -751,21 +875,26 @@ function renderSlideContent(slide: number, officialPartner: any) {
               </p>
             </div>
 
-            <div className="rounded-xl border border-ethiopia-red/40 bg-[#0e0f14] p-5">
-              <span className="font-mono text-[10px] text-ethiopia-red uppercase font-bold tracking-wider">
-                Sponsor Deadline
+            <div className="rounded-xl border border-tibeb-gold/40 bg-[#0e0f14] p-5">
+              <span className="font-mono text-[10px] text-tibeb-gold uppercase font-bold tracking-wider">
+                Sponsorship
               </span>
-              <h3 className="text-lg font-bold text-white mt-1">September 28, 2026</h3>
+              <h3 className="text-lg font-bold text-white mt-1">
+                Rolling Confirmation
+              </h3>
               <p className="text-xs text-cream/70 mt-2">
-                To guarantee company logos are included on printed banners and attendee materials.
+                Priority banner placement and brand visibility for confirmed
+                early partners.
               </p>
             </div>
           </div>
 
           <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
             <div>
-              <span className="text-white font-semibold">Ready to partner?</span>
-              <p className="text-tibeb-gold mt-0.5">contact@omarchy.org.et • Telegram: @omarchy_ethiopia</p>
+              <span className="text-white font-semibold">
+                Ready to partner?
+              </span>
+              <p className="text-tibeb-gold mt-0.5">nebiyuelias1@gmail.com</p>
             </div>
             <div className="text-right">
               <span className="text-cream/50">omarchy.org.et/meetup</span>

@@ -107,7 +107,7 @@ body {{
   width: 1200px;
   height: 1200px;
   padding: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.08) 0%, transparent 45%), #08090c;
+  background: radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.09) 0%, transparent 45%), #08090c;
 }}
 
 .content-wrapper {{
@@ -118,7 +118,7 @@ body {{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 44px 56px 44px 56px;
+  padding: 44px 56px 40px 56px;
 }}
 
 /* Header */
@@ -188,24 +188,21 @@ body {{
 
 /* Hero Section */
 .hero-sec {{
-  margin: 18px 0 16px 0;
+  margin: 14px 0 14px 0;
 }}
 
 .eyebrow {{
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.22em;
   color: #10b981;
   text-transform: uppercase;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin-bottom: 6px;
 }}
 
 .main-title {{
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: #ffffff;
@@ -220,7 +217,7 @@ body {{
 .sub-title {{
   font-size: 16px;
   color: rgba(244, 237, 228, 0.7);
-  margin-top: 8px;
+  margin-top: 6px;
   line-height: 1.4;
 }}
 
@@ -230,7 +227,7 @@ body {{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   flex: 1;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }}
 
 .tier-card {{
@@ -245,16 +242,16 @@ body {{
 }}
 
 .tier-card.lead {{
-  background: linear-gradient(180deg, rgba(251, 191, 36, 0.12) 0%, rgba(14, 15, 20, 0.95) 100%);
-  border: 2px solid rgba(251, 191, 36, 0.55);
-  box-shadow: 0 12px 35px -10px rgba(251, 191, 36, 0.25);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.14) 0%, rgba(14, 15, 20, 0.98) 100%);
+  border: 2px solid rgba(251, 191, 36, 0.6);
+  box-shadow: 0 16px 40px -10px rgba(251, 191, 36, 0.28);
 }}
 
 .card-top {{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }}
 
 .tier-pill {{
@@ -287,61 +284,70 @@ body {{
   color: rgba(244, 237, 228, 0.5);
 }}
 
+/* Huge Numbers with Emphasis */
 .tier-price-row {{
   display: flex;
   align-items: baseline;
-  gap: 8px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 18px;
 }}
 
 .price-num {{
   font-family: 'JetBrains Mono', monospace;
-  font-size: 38px;
+  font-size: 52px;
   font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
   color: #ffffff;
-  letter-spacing: -0.02em;
 }}
 
 .tier-card.lead .price-num {{
   color: #fbbf24;
+  text-shadow: 0 0 30px rgba(251, 191, 36, 0.45);
+}}
+
+.price-num.green {{
+  color: #10b981;
+  text-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
 }}
 
 .price-currency {{
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: rgba(244, 237, 228, 0.6);
 }}
 
+/* Exactly 3 Bullets per Tier */
 .perks-list {{
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }}
 
 .perks-list li {{
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: #f1f5f9;
   display: flex;
   align-items: center;
-  gap: 10px;
-  line-height: 1.35;
+  gap: 12px;
+  line-height: 1.4;
 }}
 
 .bullet {{
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: #fbbf24;
-  box-shadow: 0 0 8px rgba(251, 191, 36, 0.8);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.9);
   flex-shrink: 0;
 }}
 
 .bullet.green {{
   background: #10b981;
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.9);
 }}
 
 .bullet.dim {{
@@ -359,9 +365,9 @@ body {{
   align-items: center;
   justify-content: space-between;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11.5px;
+  font-size: 12px;
   color: rgba(244, 237, 228, 0.75);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }}
 
 .inkind-bar strong {{
@@ -371,7 +377,7 @@ body {{
 /* Footer */
 .footer {{
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 18px;
+  padding-top: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -417,20 +423,20 @@ body {{
       </div>
       <div class="event-badge">
         <span class="dot"></span>
-        <span>MEETUP 2026 • OCT 3 • ADDIS ABABA</span>
+        <span>MEETUP 2026 • ADDIS ABABA</span>
       </div>
     </div>
 
     <!-- Hero Title -->
     <div class="hero-sec">
       <div class="eyebrow">
-        <span>[ // COMMUNITY SPONSORSHIP TIERS ]</span>
+        <span>[ // COMMUNITY SPONSORSHIP ]</span>
       </div>
-      <h1 class="main-title">SUPPORT <span>ETHIOPIAN</span> OPEN SOURCE</h1>
-      <p class="sub-title">Directly connect with 100+ of Addis Ababa's sharpest Linux, systems & AI engineers.</p>
+      <h1 class="main-title">SPONSORSHIP <span>TIERS</span></h1>
+      <p class="sub-title">Connect with 100+ of Addis Ababa's sharpest Linux, systems & AI engineers.</p>
     </div>
 
-    <!-- 2x2 Tiers Grid -->
+    <!-- 2x2 Tiers Grid (Exactly 3 bullets each) -->
     <div class="tiers-grid">
       <!-- Tier 1: Lead -->
       <div class="tier-card lead">
@@ -445,10 +451,8 @@ body {{
           </div>
           <ul class="perks-list">
             <li><span class="bullet"></span> Top logo on Website, Luma & Stage Slides</li>
-            <li><span class="bullet"></span> Place your roll-up banner in the main hall</li>
-            <li><span class="bullet"></span> 2-min welcome remark / tech intro on stage</li>
-            <li><span class="bullet"></span> Company stickers & hiring flyers on tables</li>
-            <li><span class="bullet"></span> <strong>4 Reserved VIP Guest Passes</strong></li>
+            <li><span class="bullet"></span> Hall roll-up banner & table recruitment swag</li>
+            <li><span class="bullet"></span> <strong>2-min stage welcome & tech intro</strong></li>
           </ul>
         </div>
       </div>
@@ -467,9 +471,7 @@ body {{
           <ul class="perks-list">
             <li><span class="bullet"></span> Prominent logo on Website & Event Slides</li>
             <li><span class="bullet"></span> MC stage shoutout & hiring announcement</li>
-            <li><span class="bullet"></span> Swag distribution at registration desk</li>
-            <li><span class="bullet"></span> Dedicated community channel feature</li>
-            <li><span class="bullet"></span> <strong>2 Reserved VIP Guest Passes</strong></li>
+            <li><span class="bullet"></span> <strong>Company swag distribution at registration</strong></li>
           </ul>
         </div>
       </div>
@@ -487,31 +489,27 @@ body {{
           </div>
           <ul class="perks-list">
             <li><span class="bullet dim"></span> Logo & link on website sponsors section</li>
-            <li><span class="bullet dim"></span> Telegram community thank-you spotlight</li>
-            <li><span class="bullet dim"></span> MC mention at opening & closing</li>
-            <li><span class="bullet dim"></span> Direct brand reach to 300+ developers</li>
-            <li><span class="bullet dim"></span> <strong>2 Reserved VIP Guest Passes</strong></li>
+            <li><span class="bullet dim"></span> Dedicated community channel feature</li>
+            <li><span class="bullet dim"></span> <strong>MC opening & closing event mention</strong></li>
           </ul>
         </div>
       </div>
 
       <!-- Tier 4: Individual Champion -->
-      <div class="tier-card" style="border-color: rgba(16, 185, 129, 0.4);">
+      <div class="tier-card" style="border-color: rgba(16, 185, 129, 0.45);">
         <div>
           <div class="card-top">
             <span class="tier-pill green-pill">INDIVIDUAL CHAMPION</span>
             <span class="tier-slots" style="color: #10b981;">LEADERS & DEVS</span>
           </div>
           <div class="tier-price-row">
-            <span class="price-num" style="color: #10b981;">5,000</span>
+            <span class="price-num green">5,000</span>
             <span class="price-currency">ETB</span>
           </div>
           <ul class="perks-list">
             <li><span class="bullet green"></span> Name & GitHub / X handle credited on site</li>
-            <li><span class="bullet green"></span> Personal thank-you shoutout in community</li>
-            <li><span class="bullet green"></span> Official Omarchy Meetup sticker pack</li>
-            <li><span class="bullet green"></span> Low friction personal contribution</li>
-            <li><span class="bullet green"></span> <strong>1 Reserved VIP Guest Pass</strong></li>
+            <li><span class="bullet green"></span> Personal community thank-you shoutout</li>
+            <li><span class="bullet green"></span> <strong>Official Omarchy sticker pack</strong></li>
           </ul>
         </div>
       </div>
@@ -519,8 +517,8 @@ body {{
 
     <!-- In-Kind Callout Bar -->
     <div class="inkind-bar">
-      <span><strong>IN-KIND PARTNERSHIPS WELCOME:</strong> Venue • Traditional Coffee Ceremony • Swag & T-Shirt Printing • Video Media</span>
-      <span style="color: #10b981; font-weight: 700;">CONFIRM BY SEP 28</span>
+      <span><strong>IN-KIND WELCOME:</strong> Venue • Coffee Ceremony • Swag & T-Shirt Printing • Video Media</span>
+      <span style="color: #fbbf24; font-weight: 700;">ROLLING CONFIRMATION</span>
     </div>
 
     <!-- Footer -->
@@ -533,8 +531,6 @@ body {{
       </div>
       <div class="footer-right">
         <span>omarchy.org.et/deck</span>
-        <span style="color: rgba(255,255,255,0.25);">|</span>
-        <span>TG: @omarchy_ethiopia</span>
       </div>
     </div>
   </div>
@@ -555,7 +551,7 @@ body {{
   width: 1200px;
   height: 675px;
   padding: 0;
-  background: radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.08) 0%, transparent 40%), #08090c;
+  background: radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.09) 0%, transparent 40%), #08090c;
 }}
 
 .content-wrapper {{
@@ -566,7 +562,7 @@ body {{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 28px 48px;
+  padding: 26px 44px;
 }}
 
 /* Header */
@@ -623,7 +619,7 @@ body {{
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin: 12px 0 14px 0;
+  margin: 8px 0 12px 0;
 }}
 
 .main-title {{
@@ -650,7 +646,7 @@ body {{
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   flex: 1;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }}
 
 .tier-card {{
@@ -664,9 +660,9 @@ body {{
 }}
 
 .tier-card.lead {{
-  background: linear-gradient(180deg, rgba(251, 191, 36, 0.12) 0%, rgba(14, 15, 20, 0.95) 100%);
-  border: 1.5px solid rgba(251, 191, 36, 0.55);
-  box-shadow: 0 10px 30px -10px rgba(251, 191, 36, 0.2);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.14) 0%, rgba(14, 15, 20, 0.98) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(251, 191, 36, 0.25);
 }}
 
 .tier-pill {{
@@ -687,17 +683,19 @@ body {{
   color: #08090c;
 }}
 
+/* Large Numbers */
 .tier-price-row {{
   display: flex;
   align-items: baseline;
   gap: 6px;
-  margin: 8px 0 10px 0;
+  margin: 10px 0 12px 0;
 }}
 
 .price-num {{
   font-family: 'JetBrains Mono', monospace;
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 800;
+  line-height: 1;
   color: #ffffff;
 }}
 
@@ -705,39 +703,45 @@ body {{
   color: #fbbf24;
 }}
 
+.price-num.green {{
+  color: #10b981;
+}}
+
 .price-currency {{
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 700;
   color: rgba(244, 237, 228, 0.6);
 }}
 
+/* Exactly 3 Bullets */
 .perks-list {{
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }}
 
 .perks-list li {{
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 11px;
+  font-size: 11.5px;
   color: #e2e8f0;
   display: flex;
   align-items: flex-start;
   gap: 6px;
-  line-height: 1.3;
+  line-height: 1.35;
 }}
 
 .perks-list li::before {{
   content: "•";
   color: #fbbf24;
-  font-size: 12px;
+  font-size: 13px;
 }}
 
 /* Footer */
 .footer {{
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 12px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -776,17 +780,17 @@ body {{
         </div>
       </div>
       <div class="event-badge">
-        <span>MEETUP 2026 • OCT 3 • ADDIS ABABA</span>
+        <span>MEETUP 2026 • ADDIS ABABA</span>
       </div>
     </div>
 
     <!-- Title Row -->
     <div class="title-row">
-      <h1 class="main-title">SUPPORT <span>ETHIOPIAN</span> OPEN SOURCE</h1>
-      <div class="sub-title">Grassroots Community Sponsorship Tiers</div>
+      <h1 class="main-title">SPONSORSHIP <span>TIERS</span></h1>
+      <div class="sub-title">Omarchy Ethiopia Meetup 2026</div>
     </div>
 
-    <!-- 4 Tiers Grid -->
+    <!-- 4 Tiers Grid (Exactly 3 bullets each) -->
     <div class="tiers-grid">
       <!-- 20k Lead -->
       <div class="tier-card lead">
@@ -797,11 +801,9 @@ body {{
             <span class="price-currency">ETB</span>
           </div>
           <ul class="perks-list">
-            <li>Top logo on site & Luma</li>
-            <li>Roll-up banner in hall</li>
-            <li>2-min stage welcome remark</li>
-            <li>Company swag on tables</li>
-            <li><strong>4 VIP Guest Passes</strong></li>
+            <li>Top logo on site, Luma & slides</li>
+            <li>Roll-up banner & table swag</li>
+            <li><strong>2-min stage welcome & tech intro</strong></li>
           </ul>
         </div>
       </div>
@@ -815,11 +817,9 @@ body {{
             <span class="price-currency">ETB</span>
           </div>
           <ul class="perks-list">
-            <li>Logo on site & slides</li>
-            <li>MC shoutout & hiring plug</li>
-            <li>Swag at registration desk</li>
-            <li>Community channel feature</li>
-            <li><strong>2 VIP Guest Passes</strong></li>
+            <li>Logo on website & event slides</li>
+            <li>MC stage shoutout & hiring plug</li>
+            <li><strong>Company swag distribution at desk</strong></li>
           </ul>
         </div>
       </div>
@@ -834,28 +834,24 @@ body {{
           </div>
           <ul class="perks-list">
             <li>Logo on website sponsors list</li>
-            <li>Telegram group feature</li>
-            <li>MC mention at opening/close</li>
-            <li>Direct brand reach to 300+</li>
-            <li><strong>2 VIP Guest Passes</strong></li>
+            <li>Community channel feature</li>
+            <li><strong>MC opening & closing event mention</strong></li>
           </ul>
         </div>
       </div>
 
       <!-- 5k Champion -->
-      <div class="tier-card" style="border-color: rgba(16, 185, 129, 0.4);">
+      <div class="tier-card" style="border-color: rgba(16, 185, 129, 0.45);">
         <div>
           <span class="tier-pill" style="background: rgba(16, 185, 129, 0.2); color: #10b981;">CHAMPION</span>
           <div class="tier-price-row">
-            <span class="price-num" style="color: #10b981;">5,000</span>
+            <span class="price-num green">5,000</span>
             <span class="price-currency">ETB</span>
           </div>
           <ul class="perks-list">
             <li>Name & handle on website</li>
-            <li>Personal Telegram shoutout</li>
-            <li>Official meetup sticker pack</li>
-            <li>Frictionless personal support</li>
-            <li><strong>1 VIP Guest Pass</strong></li>
+            <li>Personal community shoutout</li>
+            <li><strong>Official Omarchy sticker pack</strong></li>
           </ul>
         </div>
       </div>
@@ -864,12 +860,10 @@ body {{
     <!-- Footer -->
     <div class="footer">
       <div>
-        <span>Partner:</span> {tefer_tag} • <span>Deadline: Sep 28</span> • In-kind partnerships welcome
+        <span>Partner:</span> {tefer_tag} • In-kind partnerships welcome
       </div>
       <div class="footer-right">
         <span>omarchy.org.et/deck</span>
-        <span style="color: rgba(255,255,255,0.3);">|</span>
-        <span>TG: @omarchy_ethiopia</span>
       </div>
     </div>
   </div>
@@ -887,7 +881,7 @@ def main():
     html_land = render_sponsorship_landscape(tefer_img)
     generate_png_from_html(html_land, OUTPUT_DIR / "sponsorship-tiers-landscape.png", 1200, 675)
 
-    print("Sponsorship graphics generated successfully!")
+    print("Updated sponsorship graphics generated successfully with emphasis on numbers and exactly 3 bullets!")
 
 if __name__ == "__main__":
     main()
