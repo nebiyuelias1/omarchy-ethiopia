@@ -17,6 +17,12 @@ export function Footer() {
           <Link href="/meetup" className="hover:text-tibeb-gold transition">
             Meetup 2026
           </Link>
+          <Link href="/meetup#speakers" className="hover:text-tibeb-gold transition">
+            Speakers
+          </Link>
+          <Link href="/meetup#sponsors" className="hover:text-tibeb-gold transition">
+            Sponsors
+          </Link>
           <Link
             href={meetup2026.upstreamDocs}
             target="_blank"

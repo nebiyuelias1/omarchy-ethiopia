@@ -17,7 +17,7 @@ export default function MeetupPage() {
     <div className="min-h-screen bg-[#08090c] flex flex-col justify-between">
       <main className="w-full flex-1">
         {/* Top Back Navigation Bar */}
-        <div className="mx-auto w-full max-w-4xl px-6 pt-10 pb-6 flex items-center justify-between">
+        <div className="mx-auto w-full max-w-4xl px-6 pt-10 pb-6 flex flex-wrap items-center justify-between gap-4">
           <Link
             href="/"
             className="inline-flex items-center gap-2 font-mono text-xs text-cream/70 hover:text-tibeb-gold transition"
@@ -25,6 +25,18 @@ export default function MeetupPage() {
             <ArrowLeft className="h-3.5 w-3.5" />
             <span>Back to Omarchy Ethiopia</span>
           </Link>
+
+          <div className="flex items-center gap-4 font-mono text-xs text-cream/50">
+            <a href="#speakers" className="hover:text-tibeb-gold transition">
+              #speakers
+            </a>
+            <a href="#rsvp" className="hover:text-tibeb-gold transition">
+              #rsvp
+            </a>
+            <a href="#sponsors" className="hover:text-tibeb-gold transition">
+              #sponsors
+            </a>
+          </div>
         </div>
 
         {/* Hero Banner */}
@@ -61,6 +73,12 @@ export default function MeetupPage() {
               >
                 <span>RSVP Below</span>
               </a>
+              <a
+                href="#sponsors"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 px-5 py-3 text-cream/70 transition hover:border-tibeb-gold hover:text-tibeb-gold"
+              >
+                <span>Sponsors</span>
+              </a>
             </div>
           </div>
         </section>
@@ -72,9 +90,21 @@ export default function MeetupPage() {
 
           {/* Embedded Luma Registration Card */}
           <div className="mt-24 pt-12 border-t border-white/[0.08]">
-            <section id="rsvp" className="w-full">
+            <section id="rsvp" className="w-full scroll-mt-20">
               <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                Reserve Your Seat
+                <a
+                  href="#rsvp"
+                  className="group inline-flex items-center gap-2 transition hover:text-tibeb-gold"
+                  title="Direct link to RSVP"
+                >
+                  <span>Reserve Your Seat</span>
+                  <span
+                    aria-hidden="true"
+                    className="font-mono text-xl text-tibeb-gold/40 transition-opacity group-hover:opacity-100 group-hover:text-tibeb-gold"
+                  >
+                    #
+                  </span>
+                </a>
               </h2>
 
               <div className="mt-8 overflow-hidden rounded-xl border border-white/10 bg-[#0e0f14] shadow-2xl">

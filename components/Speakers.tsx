@@ -5,9 +5,21 @@ import { speakers } from "@/data/speakers";
 
 export function Speakers() {
   return (
-    <section id="speakers" className="w-full">
+    <section id="speakers" className="w-full scroll-mt-20">
       <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-        Speakers
+        <a
+          href="#speakers"
+          className="group inline-flex items-center gap-2 transition hover:text-tibeb-gold"
+          title="Direct link to Speakers"
+        >
+          <span>Speakers</span>
+          <span
+            aria-hidden="true"
+            className="font-mono text-xl text-tibeb-gold/40 transition-opacity group-hover:opacity-100 group-hover:text-tibeb-gold"
+          >
+            #
+          </span>
+        </a>
       </h2>
 
       <div className="mt-10 grid gap-6 md:grid-cols-2">
