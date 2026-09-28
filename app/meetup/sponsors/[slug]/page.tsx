@@ -36,17 +36,13 @@ export async function generateMetadata({
 
 const tierBadgeStyles: Record<string, string> = {
   "Lead Sponsor": "border-amber-400/40 bg-amber-400/10 text-amber-300",
-  "Official Event Partner": "border-emerald-500/40 bg-emerald-500/10 text-emerald-400",
+  "Official Event Partner":
+    "border-emerald-500/40 bg-emerald-500/10 text-emerald-400",
   "Community Sponsor": "border-sky-500/40 bg-sky-500/10 text-sky-400",
   Supporter: "border-white/20 bg-white/5 text-white/80",
 };
 
-const capabilityIcons = [
-  PhoneIncoming,
-  PhoneOutgoing,
-  UserCheck,
-  Cpu,
-];
+const capabilityIcons = [PhoneIncoming, PhoneOutgoing, UserCheck, Cpu];
 
 export default async function SponsorDetailPage({
   params,
@@ -151,7 +147,8 @@ export default async function SponsorDetailPage({
                   Key Capabilities
                 </h3>
                 <p className="mt-2 font-mono text-xs text-cream/50">
-                  Core solutions built for enterprise voice, scale, and local language intelligence
+                  Core solutions built for enterprise voice, scale, and local
+                  language intelligence
                 </p>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -178,11 +175,6 @@ export default async function SponsorDetailPage({
                           <p className="mt-2 text-xs leading-relaxed text-cream/70">
                             {cap.description}
                           </p>
-                        </div>
-
-                        <div className="mt-4 flex items-center gap-1.5 font-mono text-[11px] text-emerald-400">
-                          <CheckCircle2 className="h-3 w-3" />
-                          <span>Production-ready</span>
                         </div>
                       </div>
                     );
