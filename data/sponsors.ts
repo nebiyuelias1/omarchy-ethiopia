@@ -72,7 +72,7 @@ export const sponsors: Sponsor[] = [
     slug: "tauonlabs",
     tier: "Lead Sponsor",
     href: "https://tauonlabs.com",
-    logo: "/assets/partners/tauonlabs-logo.svg",
+    logo: "/assets/partners/tauonlabs-logo.jpeg",
     tagline: "Product lab building SaaS products and incubating ideas from the ground up",
     description:
       "Tauon Labs is supporting Omarchy Ethiopia Meetup 2026 as a Lead Sponsor to help grow the local tech community and connect with talented builders.",
