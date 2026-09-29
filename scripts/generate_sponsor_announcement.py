@@ -8,7 +8,7 @@ OUTPUT_DIR = BASE_DIR / "public/assets/graphics"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 SPONSOR_NAME = "Tauon Labs"
 SPONSOR_DISPLAY_NAME = "TAUON LABS"
-SPONSOR_LOGO_PATH = BASE_DIR / "public/assets/partners/tauonlabs-logo.svg"
+SPONSOR_LOGO_PATH = BASE_DIR / "public/assets/partners/tauonlabs-logo.jpeg"
 SPONSOR_SLUG = "tauonlabs"
 
 def get_base64_image(path):
