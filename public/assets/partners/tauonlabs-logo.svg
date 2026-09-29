@@ -1,0 +1,21 @@
+<svg width="1280" height="384" viewBox="0 0 1280 384" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="384" fill="#03040B"/>
+  <g filter="url(#glowBlue)" stroke="#3B82F6" stroke-width="7">
+    <circle cx="176" cy="192" r="92"/>
+    <path d="M56 192H296"/>
+    <path d="M88 170C140 135 212 135 264 170"/>
+    <path d="M88 214C140 249 212 249 264 214"/>
+  </g>
+  <text x="360" y="232" fill="#F8FAFC" font-size="152" font-family="Arial, Helvetica, sans-serif" font-weight="500" letter-spacing="-2">tauon</text>
+  <rect x="854" y="102" width="332" height="182" rx="91" stroke="#22D3EE" stroke-width="8" filter="url(#glowBlue)"/>
+  <text x="928" y="224" fill="#22D3EE" font-size="88" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="14">LABS</text>
+</svg>
