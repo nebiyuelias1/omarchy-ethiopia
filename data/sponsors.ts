@@ -36,12 +36,13 @@ export const sponsors: Sponsor[] = [
     name: "SIMA",
     slug: "sima",
     tier: "Lead Sponsor",
+    href: "https://sima.to/pilot",
     logo: simaLogo,
-    tagline: "Conversational AI for African languages",
+    tagline: "Enterprise Voice AI that answers every call, in your language",
     description:
-      "Conversational AI for African languages powering automated inbound & outbound telephony, smart human hand-offs, and custom API integrations.",
+      "SIMA answers customers' calls in their own language, resolves requests on the spot, and hands off to a person only when it truly needs one.",
     overview:
-      "SIMA builds next-generation conversational AI specifically tailored for African languages. From handling customer support calls to scaling voice outreach, SIMA empowers organizations across the continent with voice-first intelligence.",
+      "SIMA builds enterprise voice AI tailored for African languages. Teams can learn more at sima.to and join the pilot waitlist to get started.",
     capabilities: [
       {
         title: "Handle inbound calls",
@@ -56,7 +57,7 @@ export const sponsors: Sponsor[] = [
       {
         title: "Human hand-off when task is hard",
         description:
-          "Intelligently route complex conversations or high-touch tasks to human agents with full context preserved.",
+          "Resolve requests automatically and route only complex conversations or high-touch tasks to human agents with context preserved.",
       },
       {
         title: "Custom API integration",
@@ -64,6 +65,7 @@ export const sponsors: Sponsor[] = [
           "Integrate seamlessly into existing CRMs, telecommunication gateways, custom databases, and internal workflows.",
       },
     ],
+    linkLabel: "Join SIMA pilot waitlist",
   },
   {
     name: "Tauon Labs",
