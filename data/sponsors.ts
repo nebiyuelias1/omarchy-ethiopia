@@ -65,4 +65,17 @@ export const sponsors: Sponsor[] = [
       },
     ],
   },
+  {
+    name: "Tauon Labs",
+    slug: "tauonlabs",
+    tier: "Lead Sponsor",
+    href: "https://tauonlabs.com",
+    logo: "/assets/partners/tauonlabs-logo.svg",
+    tagline: "Product lab building SaaS products and incubating ideas from the ground up",
+    description:
+      "Tauon Labs is supporting Omarchy Ethiopia Meetup 2026 as a Lead Sponsor to help grow the local tech community and connect with talented builders.",
+    overview:
+      "Tauon Labs is a product-focused lab building SaaS products and incubating ideas from the ground up. Through this sponsorship, the team is supporting local builders while sharing what they are creating.",
+    linkLabel: "Visit tauonlabs.com",
+  },
 ];

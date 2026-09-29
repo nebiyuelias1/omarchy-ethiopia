@@ -6,6 +6,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "public/assets/graphics"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+SPONSOR_NAME = "Tauon Labs"
+SPONSOR_DISPLAY_NAME = "TAUON LABS"
+SPONSOR_LOGO_PATH = BASE_DIR / "public/assets/partners/tauonlabs-logo.svg"
+SPONSOR_SLUG = "tauonlabs"
 
 def get_base64_image(path):
     if not os.path.exists(path):
@@ -93,7 +97,7 @@ def generate_png_from_html(html_content, output_path, width=1200, height=1200):
     else:
         print(f"Rendered: {output_path.name} ({width}x{height})")
 
-def render_sima_thank_you_square(sima_b64, tefer_b64):
+def render_sponsor_thank_you_square(sponsor_b64, tefer_b64):
     tefer_tag = f'<img src="{tefer_b64}" alt="Tefer" style="height: 24px; object-fit: contain;">' if tefer_b64 else 'Tefer'
 
     return f"""<!DOCTYPE html>
@@ -319,7 +323,7 @@ body {{
 
     <!-- Center Content -->
     <div class="center-content">
-      <h1 class="main-title">THANK YOU, <span>SIMA</span>!</h1>
+      <h1 class="main-title">THANK YOU, <span>{SPONSOR_DISPLAY_NAME}</span>!</h1>
 
       <!-- Sponsor Card -->
       <div class="sponsor-card">
@@ -328,7 +332,7 @@ body {{
         </div>
 
         <div class="logo-display-box">
-          <img class="sponsor-logo-img" src="{sima_b64}" alt="SIMA Logo">
+          <img class="sponsor-logo-img" src="{sponsor_b64}" alt="{SPONSOR_NAME} Logo">
         </div>
       </div>
     </div>
@@ -349,7 +353,7 @@ body {{
 </body>
 </html>"""
 
-def render_sima_thank_you_landscape(sima_b64, tefer_b64):
+def render_sponsor_thank_you_landscape(sponsor_b64, tefer_b64):
     tefer_tag = f'<img src="{tefer_b64}" alt="Tefer" style="height: 20px; object-fit: contain;">' if tefer_b64 else 'Tefer'
 
     return f"""<!DOCTYPE html>
@@ -553,12 +557,12 @@ body {{
 
     <!-- Center Content -->
     <div class="center-content">
-      <h1 class="main-title">THANK YOU, <span>SIMA</span>!</h1>
+      <h1 class="main-title">THANK YOU, <span>{SPONSOR_DISPLAY_NAME}</span>!</h1>
 
       <div class="sponsor-card-land">
         <div class="tier-badge">★ LEAD SPONSOR (20,000 ETB) ★</div>
         <div class="logo-display-land">
-          <img src="{sima_b64}" alt="SIMA Logo">
+          <img src="{sponsor_b64}" alt="{SPONSOR_NAME} Logo">
         </div>
       </div>
     </div>
@@ -580,22 +584,22 @@ body {{
 </html>"""
 
 def main():
-    sima_img = get_base64_image(BASE_DIR / "public/assets/partners/sima.png")
+    sponsor_img = get_base64_image(SPONSOR_LOGO_PATH)
     tefer_img = get_base64_image(BASE_DIR / "public/assets/partners/tefer-logo-white.png")
 
-    if not sima_img:
-        print("Error: sima.png not found!")
+    if not sponsor_img:
+        print(f"Error: {SPONSOR_LOGO_PATH.name} not found!")
         return
 
     # 1. Square Graphic (1200x1200)
-    html_sq = render_sima_thank_you_square(sima_img, tefer_b64=tefer_img)
-    generate_png_from_html(html_sq, OUTPUT_DIR / "sponsor-sima-square.png", 1200, 1200)
+    html_sq = render_sponsor_thank_you_square(sponsor_img, tefer_b64=tefer_img)
+    generate_png_from_html(html_sq, OUTPUT_DIR / f"sponsor-{SPONSOR_SLUG}-square.png", 1200, 1200)
 
     # 2. Landscape Graphic (1200x675)
-    html_land = render_sima_thank_you_landscape(sima_img, tefer_b64=tefer_img)
-    generate_png_from_html(html_land, OUTPUT_DIR / "sponsor-sima-landscape.png", 1200, 675)
+    html_land = render_sponsor_thank_you_landscape(sponsor_img, tefer_b64=tefer_img)
+    generate_png_from_html(html_land, OUTPUT_DIR / f"sponsor-{SPONSOR_SLUG}-landscape.png", 1200, 675)
 
-    print("SIMA sponsor graphics regenerated with requested clean minimal layout!")
+    print(f"{SPONSOR_NAME} sponsor graphics regenerated with requested clean minimal layout!")
 
 if __name__ == "__main__":
     main()
