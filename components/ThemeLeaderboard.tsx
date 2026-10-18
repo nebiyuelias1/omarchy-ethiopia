@@ -87,6 +87,15 @@ export default function ThemeLeaderboard({
           <p className="mt-1 text-xs text-cream/55">
             50% expert judges · 50% community votes
           </p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/13CLnfpuxT2TzKP4CSK_X4CisHbxKhDFAH-wvRMayCeU/edit?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-1 inline-flex items-center gap-1 font-mono text-[11px] text-cream/45 underline decoration-cream/20 underline-offset-2 transition hover:text-tibeb-gold hover:decoration-tibeb-gold"
+          >
+            <span>Judge scoring sheet</span>
+            <ExternalLink className="h-3 w-3" />
+          </a>
         </div>
 
         <div className="flex items-center gap-2 font-mono text-[11px] text-cream/45">
