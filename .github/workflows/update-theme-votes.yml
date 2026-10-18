@@ -22,7 +22,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cutoff="2026-10-18"
+          cutoff="2026-11-02"
           today="$(TZ=Africa/Addis_Ababa date +%F)"
           if [[ ! "$today" < "$cutoff" ]]; then
             echo "Competition is over ($today >= $cutoff). Disabling scheduled vote updates."
