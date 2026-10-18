@@ -91,24 +91,26 @@
     ]
   },
   {
-    "id": "2012",
-    "issue": 17,
+    "id": "2013",
+    "issue": 20,
     "name": "NooXShell",
     "category": "Dark Theme",
     "link": "https://github.com/whonoox/quickshell",
     "author": "NooX",
+    "screenshot": "/assets/themes/nooxshell-preview.png",
     "tags": [
       "unofficial",
       "ethiopia"
     ]
   },
   {
-    "id": "2013",
-    "issue": 18,
+    "id": "2014",
+    "issue": 21,
     "name": "Pulse",
     "category": "Dark Theme",
     "link": "https://github.com/hunde32/hyprland-dotfiles",
     "author": "Hundaol",
+    "screenshot": "https://raw.githubusercontent.com/hunde32/hyprland-dotfiles/main/rofi/images/a.png",
     "tags": [
       "unofficial",
       "ethiopia"
