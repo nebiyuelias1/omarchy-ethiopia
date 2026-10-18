@@ -4,9 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import bakedVotes from "@/data/theme-votes.json";
 
 const REPO = "nebiyuelias1/omarchy-ethiopia";
-const LABEL = "theme-competition";
-
-const POSITIVE_REACTIONS = ["+1", "heart", "hooray", "rocket", "laugh"] as const;
+const VOTES_URL = `https://raw.githubusercontent.com/${REPO}/main/data/theme-votes.json`;
 
 export type Theme = {
   id: string;
@@ -28,10 +26,8 @@ export type ThemeVotes = {
   refresh: () => void;
 };
 
-type Reactions = Record<string, number>;
-
 type BakedVotes = {
-  updatedAt?: string;
+  updatedAt?: string | null;
   votes?: Record<string, number>;
 };
 
@@ -46,49 +42,28 @@ export function voteIssueUrl(theme: Theme): string | undefined {
   return `https://github.com/${REPO}/issues/${theme.issue}`;
 }
 
-function countVotes(reactions: Reactions): number {
-  return POSITIVE_REACTIONS.reduce(
-    (total, key) => total + (reactions[key] ?? 0),
-    0,
-  );
-}
-
-async function fetchLiveVotes(
-  themes: Theme[],
-): Promise<{ votes: Record<string, number>; updatedAt: number }> {
-  const res = await fetch(
-    `https://api.github.com/repos/${REPO}/issues?state=all&labels=${LABEL}&per_page=100`,
-    { headers: { Accept: "application/vnd.github+json" } },
-  );
+async function fetchLiveVotes(): Promise<{
+  votes: Record<string, number>;
+  updatedAt: number;
+}> {
+  const res = await fetch(`${VOTES_URL}?t=${Date.now()}`, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`GitHub returned ${res.status}`);
   }
 
-  const issues = (await res.json()) as Array<{
-    number: number;
-    pull_request?: unknown;
-    reactions?: Reactions;
-  }>;
-
-  const byNumber = new Map<number, number>();
-  for (const issue of issues) {
-    if (issue.pull_request) continue;
-    byNumber.set(issue.number, countVotes(issue.reactions ?? {}));
-  }
-  if (byNumber.size === 0) {
-    throw new Error("No theme issues returned");
+  const data = (await res.json()) as BakedVotes;
+  const votes = data.votes ?? {};
+  if (Object.keys(votes).length === 0) {
+    throw new Error("No vote data returned");
   }
 
-  const votes: Record<string, number> = {};
-  for (const theme of themes) {
-    if (typeof theme.issue !== "number") continue;
-    votes[theme.id] = byNumber.get(theme.issue) ?? 0;
-  }
-
-  return { votes, updatedAt: Date.now() };
+  return {
+    votes,
+    updatedAt: data.updatedAt ? Date.parse(data.updatedAt) : Date.now(),
+  };
 }
 
-export function useThemeVotes(themes: Theme[]): ThemeVotes {
+export function useThemeVotes(): ThemeVotes {
   const [votes, setVotes] = useState<Record<string, number>>(BAKED_VOTES);
   const [updatedAt, setUpdatedAt] = useState<number | null>(BAKED_UPDATED_AT);
   const [live, setLive] = useState(false);
@@ -99,7 +74,7 @@ export function useThemeVotes(themes: Theme[]): ThemeVotes {
   useEffect(() => {
     let active = true;
 
-    fetchLiveVotes(themes)
+    fetchLiveVotes()
       .then((snapshot) => {
         if (!active) return;
         setVotes(snapshot.votes);
@@ -121,7 +96,7 @@ export function useThemeVotes(themes: Theme[]): ThemeVotes {
     return () => {
       active = false;
     };
-  }, [themes, nonce]);
+  }, [nonce]);
 
   const refresh = useCallback(() => {
     setLoading(true);

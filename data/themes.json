@@ -97,6 +97,9 @@
     "category": "Dark Theme",
     "link": "https://github.com/whonoox/quickshell",
     "author": "NooX",
+    "github_aliases": [
+      "nuuxdev"
+    ],
     "screenshot": "/assets/themes/nooxshell-preview.png",
     "tags": [
       "unofficial",

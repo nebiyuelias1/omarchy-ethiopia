@@ -14,7 +14,7 @@ const themes = themesData as Theme[];
 export default function ThemesPage() {
   const categories = [...new Set(themes.map((theme) => theme.category))].sort();
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const { votes, loading, live, error, updatedAt, refresh } = useThemeVotes(themes);
+  const { votes, loading, live, error, updatedAt, refresh } = useThemeVotes();
 
   const sortedThemes = [...themes].sort(
     (a, b) => Number(b.id) - Number(a.id),
