@@ -70,8 +70,8 @@ export default function ThemeLeaderboard({
 }: ThemeLeaderboardProps) {
   const standings = computeStandings(themes, votes);
   const judgesPresent = hasJudgeScores();
-  const leader = standings[0];
-  const hasAny = standings.some((entry) => entry.finalScore > 0);
+  const leader = standings.find((entry) => entry.rank !== null);
+  const hasAny = standings.some((entry) => (entry.finalScore ?? 0) > 0);
 
   return (
     <section
@@ -85,7 +85,7 @@ export default function ThemeLeaderboard({
             <span>Leaderboard</span>
           </h2>
           <p className="mt-1 text-xs text-cream/55">
-            50% expert judges · 50% community votes
+            50% expert judges · 50% community votes (5 pts per vote)
           </p>
           <a
             href="https://docs.google.com/spreadsheets/d/13CLnfpuxT2TzKP4CSK_X4CisHbxKhDFAH-wvRMayCeU/edit?usp=sharing"
@@ -130,7 +130,7 @@ export default function ThemeLeaderboard({
               {leader.theme.name}
             </span>
             <span className="font-mono text-sm text-cream/60">
-              final {Math.round(leader.finalScore)} / 100
+              final {Math.round(leader.finalScore ?? 0)} / 100
             </span>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function ThemeLeaderboard({
       <ol className="mt-5 space-y-2.5">
         {standings.map((entry) => {
           const issueUrl = voteIssueUrl(entry.theme);
-          const width = Math.max(0, Math.min(100, entry.finalScore));
+          const width = Math.max(0, Math.min(100, entry.finalScore ?? 0));
 
           return (
             <li
@@ -151,9 +151,9 @@ export default function ThemeLeaderboard({
               }`}
             >
               <span
-                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border font-mono text-sm font-bold ${rankStyles(entry.rank)}`}
+                className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border font-mono text-sm font-bold ${rankStyles(entry.rank ?? 0)}`}
               >
-                {entry.rank}
+                {entry.rank ?? "–"}
               </span>
 
               <div className="relative hidden h-11 w-20 shrink-0 overflow-hidden rounded-md bg-[#0b0c11] ring-1 ring-white/10 sm:block">
@@ -178,6 +178,9 @@ export default function ThemeLeaderboard({
                 </p>
                 <p className="truncate font-mono text-[11px] text-cream/50">
                   {entry.theme.author}
+                  {entry.rank === null && (
+                    <span className="text-cream/35"> · pending judge score</span>
+                  )}
                 </p>
               </div>
 
@@ -189,7 +192,11 @@ export default function ThemeLeaderboard({
                   />
                 </div>
                 <div className="flex items-center gap-4">
-                  <Stat label="final" value={Math.round(entry.finalScore)} highlight />
+                  <Stat
+                    label="final"
+                    value={entry.finalScore === null ? "—" : Math.round(entry.finalScore)}
+                    highlight
+                  />
                   <Stat
                     label="judge"
                     value={

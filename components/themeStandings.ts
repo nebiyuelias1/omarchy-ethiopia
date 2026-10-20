@@ -4,27 +4,16 @@ import type { Theme } from "./useThemeVotes";
 export const JUDGE_WEIGHT = 0.5;
 export const COMMUNITY_WEIGHT = 0.5;
 
+export const POINTS_PER_VOTE = 5;
+export const COMMUNITY_MAX = 100;
+
 type BakedScores = {
   updatedAt?: string | null;
-  scale?: Record<string, string>;
   judges?: string[];
   scores?: Record<string, { average?: number; count?: number }>;
 };
 
 const baked = bakedScores as BakedScores;
-
-export const judgePanel: string[] = baked.judges ?? [];
-
-export const judgeScale: string[] = baked.scale
-  ? Object.keys(baked.scale)
-      .sort()
-      .map((key) => baked.scale?.[key] ?? "")
-      .filter(Boolean)
-  : [];
-
-export const judgeUpdatedAt: number | null = baked.updatedAt
-  ? Date.parse(baked.updatedAt)
-  : null;
 
 export function hasJudgeScores(): boolean {
   return Object.keys(baked.scores ?? {}).length > 0;
@@ -40,26 +29,26 @@ export type Standing = {
   votes: number;
   communityScore: number;
   judgeScore: number | null;
-  finalScore: number;
-  rank: number;
+  finalScore: number | null;
+  rank: number | null;
 };
+
+function round1(value: number): number {
+  return Math.round(value * 10) / 10;
+}
 
 export function computeStandings(
   themes: Theme[],
   votes: Record<string, number>,
 ): Standing[] {
-  const counts = themes.map((theme) => votes[theme.id] ?? 0);
-  const maxVotes = Math.max(1, ...counts);
-  const judgesPresent = hasJudgeScores();
-
   const rows: Standing[] = themes.map((theme) => {
     const themeVotes = votes[theme.id] ?? 0;
-    const communityScore = (themeVotes / maxVotes) * 100;
+    const communityScore = Math.min(themeVotes * POINTS_PER_VOTE, COMMUNITY_MAX);
     const judgeScore = judgeAverage(theme.id);
     const finalScore =
-      judgesPresent && judgeScore !== null
+      judgeScore !== null
         ? JUDGE_WEIGHT * judgeScore + COMMUNITY_WEIGHT * communityScore
-        : communityScore;
+        : null;
 
     return {
       theme,
@@ -67,17 +56,36 @@ export function computeStandings(
       communityScore,
       judgeScore,
       finalScore,
-      rank: 0,
+      rank: null,
     };
   });
 
-  rows.sort(
-    (a, b) =>
-      b.finalScore - a.finalScore || a.theme.name.localeCompare(b.theme.name),
-  );
-  rows.forEach((row, index) => {
-    row.rank = index + 1;
+  const ranked = rows
+    .filter((row): row is Standing & { finalScore: number } => row.finalScore !== null)
+    .sort(
+      (a, b) =>
+        round1(b.finalScore) - round1(a.finalScore) ||
+        (b.judgeScore ?? 0) - (a.judgeScore ?? 0) ||
+        b.votes - a.votes ||
+        a.theme.name.localeCompare(b.theme.name),
+    );
+
+  let previousScore: number | null = null;
+  let previousRank = 0;
+  ranked.forEach((row, index) => {
+    const score = round1(row.finalScore);
+    if (previousScore !== null && score === previousScore) {
+      row.rank = previousRank;
+    } else {
+      row.rank = index + 1;
+      previousRank = row.rank;
+      previousScore = score;
+    }
   });
 
-  return rows;
+  const pending = rows
+    .filter((row) => row.finalScore === null)
+    .sort((a, b) => a.theme.name.localeCompare(b.theme.name));
+
+  return [...ranked, ...pending];
 }
